@@ -16,6 +16,7 @@ exports.getubikedata = function(){	//開機時先擷取一次
 				var index = val.sna //KEY  = 各站名
 				ubikedata[index] = val
 			})		
+			console.log('ubike資料擷取完成');
 		});
 	}).on('error', function(e){ // http get 錯誤時
 		  console.log("error: ", e);
