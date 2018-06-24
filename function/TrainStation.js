@@ -65,8 +65,15 @@ const TrainStaton = {
 	
 
 };
+const TrainClass = {
+	
+}
 exports.StationCode = function(station){
 	return TrainStaton[station]
+	
+}
+exports.TrainClass = function(carclass){
+	return TrainClass[carclass]
 	
 }
 //exports.TrainStaton = TrainStaton;
