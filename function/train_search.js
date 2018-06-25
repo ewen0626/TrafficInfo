@@ -15,7 +15,7 @@ var timeMinutes=time.getMinutes();
 var timeMonth=time.getMonth()+1; 
 var timeDate=time.getDate();
 var timeYear = time.getYear();
-exports.getTrainTime = function getTrainTime(StartStation,EndStation){
+exports.getTrainTime = function (StartStation,EndStation){
 	StartStation = TrainStation.StationCode(StartStation);
 	EndStation = TrainStation.StationCode(EndStation);
 	StartStation = StartStation.toString();
@@ -74,7 +74,6 @@ exports.getTrainTime = function getTrainTime(StartStation,EndStation){
 		return a.TimeInfos[0].DepTime > b.TimeInfos[0].DepTime ? 1: -1;
 		
 	})
-
 	var nowtime = timeYear+1900+"/"+ timeMonth +"/" + timeDate + " " + timeHour + ":" + timeMinutes;
 	console.log(nowtime)
 	var today = timeYear+1900+"/"+ timeMonth +"/" + timeDate
@@ -90,8 +89,15 @@ exports.getTrainTime = function getTrainTime(StartStation,EndStation){
 			return false
 		}	
 	})
-	//console.log(final)
+	
+	final = final.map(function(value){
+		value.CarClass = TrainStation.TrainClass(value.CarClass)
+		return value
+	})
+	console.log(final);
 	return final
 }
 //console.log(TrainStation.TrainClass('1120'))
 //getTrainTime(1011,1025)
+//console.log(TrainStation.TrainClass(1120))
+//console.log(TrainStation.StationCode('基隆'))

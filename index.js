@@ -12,6 +12,6 @@ routes(app) //抓取路由設定
 app.listen(config.config.port,function(){
 	console.log("伺服器已啟動 Port : " + config.config.port);
 	ubike.getubikedata();
-	console.log(train.getTrainTime("台北","板橋"));
+	console.log(train.getTrainTime("板橋","臺北"));
 });
 
