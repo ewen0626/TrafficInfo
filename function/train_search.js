@@ -9,7 +9,9 @@
 var traindata = require('./20180622.json');
 var TrainStation  = require('./TrainStation.js');
 var arr = traindata.TrainInfos;
-var time = new Date();
+d = new Date();
+utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+var time=new Date(utc + (3600000*8));
 var timeHour=time.getHours(); 
 var timeMinutes=time.getMinutes(); 
 var timeMonth=time.getMonth()+1; 
@@ -94,7 +96,7 @@ exports.getTrainTime = function (StartStation,EndStation){
 		value.CarClass = TrainStation.TrainClass(value.CarClass)
 		return value
 	})
-	console.log(final);
+	//console.log(final);
 	return final
 }
 //console.log(TrainStation.TrainClass('1120'))

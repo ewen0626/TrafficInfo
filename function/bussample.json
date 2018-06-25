@@ -1,0 +1,2899 @@
+{
+  "BusDynInfo": {
+    "EssentialInfo": {
+      "Location": {
+        "name": "Maxwin",
+        "UpdateTime": "2018-06-25 21:34:30"
+      }
+    },
+    "BusInfo": {
+      "Route": {
+        "-id": "3010",
+        "EstimateTime": [
+          {
+            "-StopID": "0879",
+            "-SID": "5176",
+            "-StopName": "中壢分局",
+            "-GoBack": "1",
+            "-seqNo": "1",
+            "-Value": "null",
+            "-comeTime": "21:40",
+            "-IVRNO": "181",
+            "-EXTVoiceNo": "0879",
+            "-schId": "3010_1_20180625214000"
+          },
+          {
+            "-StopID": "0307",
+            "-SID": "4157",
+            "-StopName": "第一銀行",
+            "-GoBack": "1",
+            "-seqNo": "2",
+            "-Value": "null",
+            "-comeTime": "21:40",
+            "-IVRNO": "565",
+            "-EXTVoiceNo": "0307",
+            "-schId": "3010_1_20180625214000"
+          },
+          {
+            "-StopID": "0560",
+            "-SID": "5544",
+            "-StopName": "第一市場",
+            "-GoBack": "1",
+            "-seqNo": "3",
+            "-Value": "null",
+            "-comeTime": "21:43",
+            "-IVRNO": "560",
+            "-EXTVoiceNo": "560",
+            "-schId": "3010_1_20180625214000"
+          },
+          {
+            "-StopID": "0318",
+            "-SID": "5547",
+            "-StopName": "永珍",
+            "-GoBack": "1",
+            "-seqNo": "4",
+            "-Value": "null",
+            "-comeTime": "21:43",
+            "-IVRNO": "302",
+            "-EXTVoiceNo": "0318",
+            "-schId": "3010_1_20180625214000"
+          },
+          {
+            "-StopID": "0325",
+            "-SID": "5550",
+            "-StopName": "新生路",
+            "-GoBack": "1",
+            "-seqNo": "5",
+            "-Value": "null",
+            "-comeTime": "21:44",
+            "-IVRNO": "645",
+            "-EXTVoiceNo": "0325",
+            "-schId": "3010_1_20180625214000"
+          },
+          {
+            "-StopID": "0327",
+            "-SID": "5552",
+            "-StopName": "中美路",
+            "-GoBack": "1",
+            "-seqNo": "6",
+            "-Value": "null",
+            "-comeTime": "21:35",
+            "-IVRNO": "151",
+            "-EXTVoiceNo": "0327",
+            "-schId": "3010_1_20180625213000"
+          },
+          {
+            "-StopID": "0331",
+            "-SID": "5558",
+            "-StopName": "中壢監理站",
+            "-GoBack": "1",
+            "-seqNo": "7",
+            "-Value": "1",
+            "-comeTime": "21:36",
+            "-IVRNO": "194",
+            "-carId": "596-U7",
+            "-EXTVoiceNo": "0331",
+            "-schId": "3010_1_20180625213000",
+            "ests": {
+              "est": {
+                "-carid": "596-U7",
+                "-est": "1",
+                "-countdowntime": "42",
+                "-islast": "0"
+              }
+            }
+          },
+          {
+            "-StopID": "0334",
+            "-SID": "4674",
+            "-StopName": "新街",
+            "-GoBack": "1",
+            "-seqNo": "8",
+            "-Value": "3",
+            "-comeTime": "21:37",
+            "-IVRNO": "566",
+            "-carId": "596-U7",
+            "-EXTVoiceNo": "0334",
+            "-schId": "3010_1_20180625213000",
+            "ests": {
+              "est": {
+                "-carid": "596-U7",
+                "-est": "3",
+                "-countdowntime": "42",
+                "-islast": "0"
+              }
+            }
+          },
+          {
+            "-StopID": "0338",
+            "-SID": "4697",
+            "-StopName": "中壢聯合辦公大樓",
+            "-GoBack": "1",
+            "-seqNo": "9",
+            "-Value": "3",
+            "-comeTime": "21:38",
+            "-IVRNO": "185",
+            "-carId": "596-U7",
+            "-EXTVoiceNo": "0338",
+            "-schId": "3010_1_20180625213000",
+            "ests": {
+              "est": {
+                "-carid": "596-U7",
+                "-est": "3",
+                "-countdowntime": "42",
+                "-islast": "0"
+              }
+            }
+          },
+          {
+            "-StopID": "0341",
+            "-SID": "4753",
+            "-StopName": "中壢簡易庭",
+            "-GoBack": "1",
+            "-seqNo": "10",
+            "-Value": "4",
+            "-comeTime": "21:40",
+            "-IVRNO": "198",
+            "-carId": "596-U7",
+            "-EXTVoiceNo": "0341",
+            "-schId": "3010_1_20180625213000",
+            "ests": {
+              "est": {
+                "-carid": "596-U7",
+                "-est": "4",
+                "-countdowntime": "42",
+                "-islast": "0"
+              }
+            }
+          },
+          {
+            "-StopID": "0346",
+            "-SID": "4810",
+            "-StopName": "台灣拉鍊",
+            "-GoBack": "1",
+            "-seqNo": "11",
+            "-Value": "5",
+            "-comeTime": "21:41",
+            "-IVRNO": "277",
+            "-carId": "596-U7",
+            "-EXTVoiceNo": "0346",
+            "-schId": "3010_1_20180625213000",
+            "ests": {
+              "est": {
+                "-carid": "596-U7",
+                "-est": "5",
+                "-countdowntime": "42",
+                "-islast": "0"
+              }
+            }
+          },
+          {
+            "-StopID": "0347",
+            "-SID": "4817",
+            "-StopName": "中原",
+            "-GoBack": "1",
+            "-seqNo": "12",
+            "-Value": "7",
+            "-comeTime": "21:42",
+            "-IVRNO": "153",
+            "-carId": "596-U7",
+            "-EXTVoiceNo": "0347",
+            "-schId": "3010_1_20180625213000",
+            "ests": {
+              "est": {
+                "-carid": "596-U7",
+                "-est": "7",
+                "-countdowntime": "42",
+                "-islast": "0"
+              }
+            }
+          },
+          {
+            "-StopID": "0353",
+            "-SID": "4848",
+            "-StopName": "中壢工業區",
+            "-GoBack": "1",
+            "-seqNo": "13",
+            "-Value": "8",
+            "-comeTime": "21:43",
+            "-IVRNO": "179",
+            "-carId": "596-U7",
+            "-EXTVoiceNo": "0353",
+            "-schId": "3010_1_20180625213000",
+            "ests": {
+              "est": {
+                "-carid": "596-U7",
+                "-est": "8",
+                "-countdowntime": "42",
+                "-islast": "0"
+              }
+            }
+          },
+          {
+            "-StopID": "0357",
+            "-SID": "4904",
+            "-StopName": "內壢國中",
+            "-GoBack": "1",
+            "-seqNo": "14",
+            "-Value": "8",
+            "-comeTime": "21:44",
+            "-IVRNO": "223",
+            "-carId": "596-U7",
+            "-EXTVoiceNo": "0357",
+            "-schId": "3010_1_20180625213000",
+            "ests": {
+              "est": {
+                "-carid": "596-U7",
+                "-est": "8",
+                "-countdowntime": "42",
+                "-islast": "0"
+              }
+            }
+          },
+          {
+            "-StopID": "0359",
+            "-SID": "4907",
+            "-StopName": "自立新村",
+            "-GoBack": "1",
+            "-seqNo": "15",
+            "-Value": "0",
+            "-comeTime": "21:45",
+            "-IVRNO": "340",
+            "-carId": "692-U7-C",
+            "-EXTVoiceNo": "0359",
+            "-schId": "3010_1_20180625213000",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "0",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "9",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0361",
+            "-SID": "4909",
+            "-StopName": "日月光公司",
+            "-GoBack": "1",
+            "-seqNo": "16",
+            "-Value": "1",
+            "-comeTime": "21:36",
+            "-IVRNO": "247",
+            "-carId": "692-U7-C",
+            "-EXTVoiceNo": "0361",
+            "-schId": "3010_1_20180625212000",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "1",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "10",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0365",
+            "-SID": "4913",
+            "-StopName": "上內壢",
+            "-GoBack": "1",
+            "-seqNo": "17",
+            "-Value": "2",
+            "-comeTime": "21:37",
+            "-IVRNO": "47",
+            "-carId": "692-U7-C",
+            "-EXTVoiceNo": "0365",
+            "-schId": "3010_1_20180625212000",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "2",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "11",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0369",
+            "-SID": "1040",
+            "-StopName": "內壢火車站",
+            "-GoBack": "1",
+            "-seqNo": "18",
+            "-Value": "3",
+            "-comeTime": "21:37",
+            "-IVRNO": "221",
+            "-carId": "692-U7-C",
+            "-EXTVoiceNo": "0369",
+            "-schId": "3010_1_20180625212000",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "3",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "12",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0370",
+            "-SID": "1041",
+            "-StopName": "內壢",
+            "-GoBack": "1",
+            "-seqNo": "19",
+            "-Value": "4",
+            "-comeTime": "21:39",
+            "-IVRNO": "220",
+            "-carId": "692-U7-C",
+            "-EXTVoiceNo": "0370",
+            "-schId": "3010_1_20180625212000",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "4",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "13",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0372",
+            "-SID": "1043",
+            "-StopName": "漁管處",
+            "-GoBack": "1",
+            "-seqNo": "20",
+            "-Value": "5",
+            "-comeTime": "21:40",
+            "-IVRNO": "719",
+            "-carId": "692-U7-C",
+            "-EXTVoiceNo": "0372",
+            "-schId": "3010_1_20180625212000",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "5",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "15",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0373",
+            "-SID": "1044",
+            "-StopName": "署立桃園醫院",
+            "-GoBack": "1",
+            "-seqNo": "21",
+            "-Value": "6",
+            "-comeTime": "21:41",
+            "-IVRNO": "693",
+            "-carId": "692-U7-C",
+            "-EXTVoiceNo": "0373",
+            "-schId": "3010_1_20180625212000",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "6",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "15",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0375",
+            "-SID": "1046",
+            "-StopName": "龍壽街口",
+            "-GoBack": "1",
+            "-seqNo": "22",
+            "-Value": "0",
+            "-comeTime": "21:42",
+            "-IVRNO": "166",
+            "-carId": "853-FN",
+            "-EXTVoiceNo": "0375",
+            "-schId": "3010_1_20180625212000",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "853-FN",
+                  "-est": "0",
+                  "-countdowntime": "56",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "7",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "17",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0377",
+            "-SID": "1048",
+            "-StopName": "龍祥里",
+            "-GoBack": "1",
+            "-seqNo": "23",
+            "-Value": "1",
+            "-comeTime": "21:36",
+            "-IVRNO": "801",
+            "-carId": "853-FN",
+            "-EXTVoiceNo": "0377",
+            "-schId": "3010_1_20180625211300",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "853-FN",
+                  "-est": "1",
+                  "-countdowntime": "56",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "8",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "18",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0380",
+            "-SID": "1051",
+            "-StopName": "高城居易社區",
+            "-GoBack": "1",
+            "-seqNo": "24",
+            "-Value": "1",
+            "-comeTime": "21:37",
+            "-IVRNO": "525",
+            "-carId": "965-FP",
+            "-EXTVoiceNo": "0380",
+            "-schId": "3010_1_20180625211300",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "965-FP",
+                  "-est": "1",
+                  "-countdowntime": "36",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "853-FN",
+                  "-est": "2",
+                  "-countdowntime": "56",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "9",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "19",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0382",
+            "-SID": "1053",
+            "-StopName": "中華路",
+            "-GoBack": "1",
+            "-seqNo": "25",
+            "-Value": "2",
+            "-comeTime": "21:38",
+            "-IVRNO": "165",
+            "-carId": "965-FP",
+            "-EXTVoiceNo": "0382",
+            "-schId": "3010_1_20180625211300",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "965-FP",
+                  "-est": "2",
+                  "-countdowntime": "36",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "853-FN",
+                  "-est": "3",
+                  "-countdowntime": "56",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "10",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "20",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0383",
+            "-SID": "1054",
+            "-StopName": "明光社區",
+            "-GoBack": "1",
+            "-seqNo": "26",
+            "-Value": "3",
+            "-comeTime": "21:39",
+            "-IVRNO": "392",
+            "-carId": "965-FP",
+            "-EXTVoiceNo": "0383",
+            "-schId": "3010_1_20180625211300",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "965-FP",
+                  "-est": "3",
+                  "-countdowntime": "36",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "853-FN",
+                  "-est": "3",
+                  "-countdowntime": "56",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "11",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "20",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0385",
+            "-SID": "1056",
+            "-StopName": "茄苳溪",
+            "-GoBack": "1",
+            "-seqNo": "27",
+            "-Value": "3",
+            "-comeTime": "21:40",
+            "-IVRNO": "478",
+            "-carId": "965-FP",
+            "-EXTVoiceNo": "0385",
+            "-schId": "3010_1_20180625211300",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "965-FP",
+                  "-est": "3",
+                  "-countdowntime": "36",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "853-FN",
+                  "-est": "3",
+                  "-countdowntime": "56",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "11",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "21",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "5945",
+            "-SID": "38999",
+            "-StopName": "輝煌世紀",
+            "-GoBack": "1",
+            "-seqNo": "28",
+            "-Value": "3",
+            "-comeTime": "21:40",
+            "-IVRNO": "5945",
+            "-carId": "965-FP",
+            "-EXTVoiceNo": "5945",
+            "-schId": "3010_1_20180625211300",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "965-FP",
+                  "-est": "3",
+                  "-countdowntime": "36",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "853-FN",
+                  "-est": "4",
+                  "-countdowntime": "56",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "12",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "21",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0387",
+            "-SID": "1058",
+            "-StopName": "宏太社區",
+            "-GoBack": "1",
+            "-seqNo": "29",
+            "-Value": "3",
+            "-comeTime": "21:41",
+            "-IVRNO": "352",
+            "-carId": "965-FP",
+            "-EXTVoiceNo": "0387",
+            "-schId": "3010_1_20180625211300",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "965-FP",
+                  "-est": "3",
+                  "-countdowntime": "36",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "853-FN",
+                  "-est": "5",
+                  "-countdowntime": "56",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "12",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "22",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0389",
+            "-SID": "1060",
+            "-StopName": "武陵高中",
+            "-GoBack": "1",
+            "-seqNo": "30",
+            "-Value": "4",
+            "-comeTime": "21:35",
+            "-IVRNO": "413",
+            "-carId": "965-FP",
+            "-EXTVoiceNo": "0389",
+            "-schId": "3010_1_20180625210600",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "965-FP",
+                  "-est": "4",
+                  "-countdowntime": "36",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "853-FN",
+                  "-est": "5",
+                  "-countdowntime": "56",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "13",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "23",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0591",
+            "-SID": "1203",
+            "-StopName": "新名人賞",
+            "-GoBack": "1",
+            "-seqNo": "31",
+            "-Value": "5",
+            "-comeTime": "21:35",
+            "-IVRNO": "649",
+            "-carId": "965-FP",
+            "-EXTVoiceNo": "0591",
+            "-schId": "3010_1_20180625210600",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "965-FP",
+                  "-est": "5",
+                  "-countdowntime": "36",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "853-FN",
+                  "-est": "6",
+                  "-countdowntime": "56",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "13",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "23",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0392",
+            "-SID": "1063",
+            "-StopName": "中山國小",
+            "-GoBack": "1",
+            "-seqNo": "32",
+            "-Value": "7",
+            "-comeTime": "21:37",
+            "-IVRNO": "118",
+            "-carId": "965-FP",
+            "-EXTVoiceNo": "0392",
+            "-schId": "3010_1_20180625210600",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "965-FP",
+                  "-est": "7",
+                  "-countdowntime": "36",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "853-FN",
+                  "-est": "8",
+                  "-countdowntime": "56",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "15",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "25",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0396",
+            "-SID": "1067",
+            "-StopName": "中山中平路口",
+            "-GoBack": "1",
+            "-seqNo": "33",
+            "-Value": "7",
+            "-comeTime": "21:38",
+            "-IVRNO": "112",
+            "-carId": "965-FP",
+            "-EXTVoiceNo": "0396",
+            "-schId": "3010_1_20180625210600",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "965-FP",
+                  "-est": "7",
+                  "-countdowntime": "36",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "853-FN",
+                  "-est": "8",
+                  "-countdowntime": "56",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "16",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "26",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0399",
+            "-SID": "1070",
+            "-StopName": "桃園法院",
+            "-GoBack": "1",
+            "-seqNo": "34",
+            "-Value": "9",
+            "-comeTime": "21:39",
+            "-IVRNO": "496",
+            "-carId": "965-FP",
+            "-EXTVoiceNo": "0399",
+            "-schId": "3010_1_20180625210600",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "965-FP",
+                  "-est": "9",
+                  "-countdowntime": "36",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "853-FN",
+                  "-est": "10",
+                  "-countdowntime": "56",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "17",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "27",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0403",
+            "-SID": "1074",
+            "-StopName": "土地改革館",
+            "-GoBack": "1",
+            "-seqNo": "35",
+            "-Value": "10",
+            "-comeTime": "21:40",
+            "-IVRNO": "57",
+            "-carId": "965-FP",
+            "-EXTVoiceNo": "0403",
+            "-schId": "3010_1_20180625210600",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "965-FP",
+                  "-est": "10",
+                  "-countdowntime": "36",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "853-FN",
+                  "-est": "11",
+                  "-countdowntime": "56",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "19",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "28",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0408",
+            "-SID": "1078",
+            "-StopName": "桃園市政府",
+            "-GoBack": "1",
+            "-seqNo": "36",
+            "-Value": "12",
+            "-comeTime": "21:35",
+            "-IVRNO": "508",
+            "-carId": "965-FP",
+            "-EXTVoiceNo": "0408",
+            "-schId": "3010_1_20180625205900",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "965-FP",
+                  "-est": "12",
+                  "-countdowntime": "36",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "853-FN",
+                  "-est": "13",
+                  "-countdowntime": "56",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "20",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "30",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0410",
+            "-SID": "1081",
+            "-StopName": "中山育樂街口",
+            "-GoBack": "1",
+            "-seqNo": "37",
+            "-Value": "12",
+            "-comeTime": "21:36",
+            "-IVRNO": "114",
+            "-carId": "965-FP",
+            "-EXTVoiceNo": "0410",
+            "-schId": "3010_1_20180625205900",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "965-FP",
+                  "-est": "12",
+                  "-countdowntime": "36",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "853-FN",
+                  "-est": "14",
+                  "-countdowntime": "56",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "21",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "31",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0415",
+            "-SID": "1086",
+            "-StopName": "中山三民路口",
+            "-GoBack": "1",
+            "-seqNo": "38",
+            "-Value": "13",
+            "-comeTime": "21:37",
+            "-IVRNO": "111",
+            "-carId": "965-FP",
+            "-EXTVoiceNo": "0415",
+            "-schId": "3010_1_20180625205900",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "965-FP",
+                  "-est": "13",
+                  "-countdowntime": "36",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "853-FN",
+                  "-est": "14",
+                  "-countdowntime": "56",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "22",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "31",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0419",
+            "-SID": "1090",
+            "-StopName": "中山南華街口",
+            "-GoBack": "1",
+            "-seqNo": "39",
+            "-Value": "0",
+            "-comeTime": "21:38",
+            "-IVRNO": "117",
+            "-carId": "FAD-562",
+            "-EXTVoiceNo": "0419",
+            "-schId": "3010_1_20180625205900",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "FAD-562",
+                  "-est": "0",
+                  "-countdowntime": "78",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "965-FP",
+                  "-est": "14",
+                  "-countdowntime": "36",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "853-FN",
+                  "-est": "15",
+                  "-countdowntime": "56",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "23",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "32",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0427",
+            "-SID": "1098",
+            "-StopName": "中山路",
+            "-GoBack": "1",
+            "-seqNo": "40",
+            "-Value": "2",
+            "-comeTime": "21:39",
+            "-IVRNO": "119",
+            "-carId": "FAD-562",
+            "-EXTVoiceNo": "0427",
+            "-schId": "3010_1_20180625205900",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "FAD-562",
+                  "-est": "2",
+                  "-countdowntime": "78",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "965-FP",
+                  "-est": "15",
+                  "-countdowntime": "36",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "853-FN",
+                  "-est": "17",
+                  "-countdowntime": "56",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "24",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "34",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0432",
+            "-SID": "5596",
+            "-StopName": "景福宮",
+            "-GoBack": "1",
+            "-seqNo": "41",
+            "-Value": "2",
+            "-comeTime": "21:39",
+            "-IVRNO": "608",
+            "-carId": "FAD-562",
+            "-EXTVoiceNo": "0432",
+            "-schId": "3010_1_20180625205900",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "FAD-562",
+                  "-est": "2",
+                  "-countdowntime": "78",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "965-FP",
+                  "-est": "16",
+                  "-countdowntime": "36",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "853-FN",
+                  "-est": "17",
+                  "-countdowntime": "56",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "25",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "34",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0503",
+            "-SID": "1598",
+            "-StopName": "桃園郵局",
+            "-GoBack": "1",
+            "-seqNo": "42",
+            "-Value": "3",
+            "-comeTime": "21:41",
+            "-IVRNO": "503",
+            "-carId": "FAD-562",
+            "-EXTVoiceNo": "503",
+            "-schId": "3010_1_20180625205900",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "FAD-562",
+                  "-est": "3",
+                  "-countdowntime": "78",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "965-FP",
+                  "-est": "17",
+                  "-countdowntime": "36",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "853-FN",
+                  "-est": "19",
+                  "-countdowntime": "56",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "26",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "36",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "2130",
+            "-SID": "64667",
+            "-StopName": "今日飯店",
+            "-GoBack": "1",
+            "-seqNo": "43",
+            "-Value": "0",
+            "-comeTime": "21:43",
+            "-IVRNO": "2130",
+            "-carId": "070-FX",
+            "-EXTVoiceNo": "2130",
+            "-schId": "3010_1_20180625205900",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "070-FX",
+                  "-est": "0",
+                  "-countdowntime": "79",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "FAD-562",
+                  "-est": "5",
+                  "-countdowntime": "78",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "965-FP",
+                  "-est": "20",
+                  "-countdowntime": "36",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "853-FN",
+                  "-est": "21",
+                  "-countdowntime": "56",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "28",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "38",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0614",
+            "-SID": "57913",
+            "-StopName": "民生成功路口",
+            "-GoBack": "1",
+            "-seqNo": "44",
+            "-Value": "2",
+            "-comeTime": "21:45",
+            "-IVRNO": "290",
+            "-carId": "070-FX",
+            "-EXTVoiceNo": "0614",
+            "-schId": "3010_1_20180625205900",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "070-FX",
+                  "-est": "2",
+                  "-countdowntime": "79",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "FAD-562",
+                  "-est": "6",
+                  "-countdowntime": "78",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "965-FP",
+                  "-est": "21",
+                  "-countdowntime": "36",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "853-FN",
+                  "-est": "22",
+                  "-countdowntime": "56",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "30",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "39",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0401",
+            "-SID": "1365",
+            "-StopName": "東門國小",
+            "-GoBack": "1",
+            "-seqNo": "45",
+            "-Value": "3",
+            "-comeTime": "21:45",
+            "-IVRNO": "401",
+            "-carId": "070-FX",
+            "-EXTVoiceNo": "401",
+            "-schId": "3010_1_20180625205900",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "070-FX",
+                  "-est": "3",
+                  "-countdowntime": "79",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "FAD-562",
+                  "-est": "7",
+                  "-countdowntime": "78",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "965-FP",
+                  "-est": "22",
+                  "-countdowntime": "36",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "853-FN",
+                  "-est": "23",
+                  "-countdowntime": "56",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "31",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "40",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0135",
+            "-SID": "63146",
+            "-StopName": "中央街口",
+            "-GoBack": "1",
+            "-seqNo": "46",
+            "-Value": "0",
+            "-comeTime": "21:47",
+            "-IVRNO": "135",
+            "-carId": "KKA-3713",
+            "-EXTVoiceNo": "135",
+            "-schId": "3010_1_20180625205900",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "KKA-3713",
+                  "-est": "0",
+                  "-countdowntime": "30",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "070-FX",
+                  "-est": "3",
+                  "-countdowntime": "79",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "FAD-562",
+                  "-est": "8",
+                  "-countdowntime": "78",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "965-FP",
+                  "-est": "23",
+                  "-countdowntime": "36",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "853-FN",
+                  "-est": "24",
+                  "-countdowntime": "56",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "32",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "41",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "6181",
+            "-SID": "57987",
+            "-StopName": "地方稅務局",
+            "-GoBack": "1",
+            "-seqNo": "47",
+            "-Value": "1",
+            "-comeTime": "21:40",
+            "-IVRNO": "6181",
+            "-carId": "KKA-3713",
+            "-EXTVoiceNo": "6181",
+            "-schId": "3010_1_20180625205200",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "KKA-3713",
+                  "-est": "1",
+                  "-countdowntime": "30",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "070-FX",
+                  "-est": "3",
+                  "-countdowntime": "79",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "FAD-562",
+                  "-est": "9",
+                  "-countdowntime": "78",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "965-FP",
+                  "-est": "23",
+                  "-countdowntime": "36",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "853-FN",
+                  "-est": "25",
+                  "-countdowntime": "56",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "32",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "42",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0504",
+            "-SID": "1385",
+            "-StopName": "桃園農工",
+            "-GoBack": "1",
+            "-seqNo": "48",
+            "-Value": "1",
+            "-comeTime": "21:40",
+            "-IVRNO": "504",
+            "-carId": "KKA-3713",
+            "-EXTVoiceNo": "504",
+            "-schId": "3010_1_20180625205200",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "KKA-3713",
+                  "-est": "1",
+                  "-countdowntime": "30",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "070-FX",
+                  "-est": "4",
+                  "-countdowntime": "79",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "FAD-562",
+                  "-est": "9",
+                  "-countdowntime": "78",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "965-FP",
+                  "-est": "24",
+                  "-countdowntime": "36",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "853-FN",
+                  "-est": "25",
+                  "-countdowntime": "56",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "33",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "42",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0812",
+            "-SID": "63228",
+            "-StopName": "體育館",
+            "-GoBack": "1",
+            "-seqNo": "49",
+            "-Value": "2",
+            "-comeTime": "21:34",
+            "-IVRNO": "812",
+            "-carId": "KKA-3713",
+            "-EXTVoiceNo": "812",
+            "-schId": "3010_1_20180625204500",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "KKA-3713",
+                  "-est": "2",
+                  "-countdowntime": "30",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "070-FX",
+                  "-est": "4",
+                  "-countdowntime": "79",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "FAD-562",
+                  "-est": "10",
+                  "-countdowntime": "78",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "965-FP",
+                  "-est": "24",
+                  "-countdowntime": "36",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "853-FN",
+                  "-est": "26",
+                  "-countdowntime": "56",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "33",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "43",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "2447",
+            "-SID": "2986",
+            "-StopName": "桃園巨蛋",
+            "-GoBack": "1",
+            "-seqNo": "50",
+            "-Value": "3",
+            "-comeTime": "21:35",
+            "-IVRNO": "2447",
+            "-carId": "KKA-3713",
+            "-EXTVoiceNo": "2447",
+            "-schId": "3010_1_20180625204500",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "KKA-3713",
+                  "-est": "3",
+                  "-countdowntime": "30",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "070-FX",
+                  "-est": "6",
+                  "-countdowntime": "79",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "FAD-562",
+                  "-est": "11",
+                  "-countdowntime": "78",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "965-FP",
+                  "-est": "26",
+                  "-countdowntime": "36",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "853-FN",
+                  "-est": "27",
+                  "-countdowntime": "56",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "692-U7-C",
+                  "-est": "35",
+                  "-countdowntime": "54",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "596-U7",
+                  "-est": "44",
+                  "-countdowntime": "42",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "2447",
+            "-SID": "2986",
+            "-StopName": "桃園巨蛋",
+            "-GoBack": "2",
+            "-seqNo": "1",
+            "-Value": "null",
+            "-comeTime": "21:40",
+            "-IVRNO": "2447",
+            "-EXTVoiceNo": "2447",
+            "-schId": "3010_2_20180625214000"
+          },
+          {
+            "-StopID": "3479",
+            "-SID": "6115",
+            "-StopName": "山鶯萬壽路口",
+            "-GoBack": "2",
+            "-seqNo": "2",
+            "-Value": "null",
+            "-comeTime": "21:43",
+            "-IVRNO": "3479",
+            "-EXTVoiceNo": "3479",
+            "-schId": "3010_2_20180625214000"
+          },
+          {
+            "-StopID": "0396",
+            "-SID": "64955",
+            "-StopName": "東山里",
+            "-GoBack": "2",
+            "-seqNo": "3",
+            "-Value": "null",
+            "-comeTime": "21:34",
+            "-IVRNO": "396",
+            "-EXTVoiceNo": "396",
+            "-schId": "3010_2_20180625213000"
+          },
+          {
+            "-StopID": "0675",
+            "-SID": "1268",
+            "-StopName": "桃園公車站",
+            "-GoBack": "2",
+            "-seqNo": "4",
+            "-Value": "null",
+            "-comeTime": "21:35",
+            "-IVRNO": "493",
+            "-EXTVoiceNo": "0675",
+            "-schId": "3010_2_20180625213000"
+          },
+          {
+            "-StopID": "0441",
+            "-SID": "5605",
+            "-StopName": "成功路",
+            "-GoBack": "2",
+            "-seqNo": "5",
+            "-Value": "null",
+            "-comeTime": "21:39",
+            "-IVRNO": "329",
+            "-EXTVoiceNo": "0441",
+            "-schId": "3010_2_20180625213000"
+          },
+          {
+            "-StopID": "0445",
+            "-SID": "5609",
+            "-StopName": "關帝廟",
+            "-GoBack": "2",
+            "-seqNo": "6",
+            "-Value": "null",
+            "-comeTime": "21:40",
+            "-IVRNO": "836",
+            "-EXTVoiceNo": "0445",
+            "-schId": "3010_2_20180625213000"
+          },
+          {
+            "-StopID": "0608",
+            "-SID": "1220",
+            "-StopName": "中山民生路口",
+            "-GoBack": "2",
+            "-seqNo": "7",
+            "-Value": "null",
+            "-comeTime": "21:42",
+            "-IVRNO": "113",
+            "-EXTVoiceNo": "0608",
+            "-schId": "3010_2_20180625213000"
+          },
+          {
+            "-StopID": "0451",
+            "-SID": "5615",
+            "-StopName": "景福宮",
+            "-GoBack": "2",
+            "-seqNo": "8",
+            "-Value": "null",
+            "-comeTime": "21:42",
+            "-IVRNO": "608",
+            "-EXTVoiceNo": "0451",
+            "-schId": "3010_2_20180625213000"
+          },
+          {
+            "-StopID": "0454",
+            "-SID": "5618",
+            "-StopName": "中山路",
+            "-GoBack": "2",
+            "-seqNo": "9",
+            "-Value": "null",
+            "-comeTime": "21:43",
+            "-IVRNO": "119",
+            "-EXTVoiceNo": "0454",
+            "-schId": "3010_2_20180625213000"
+          },
+          {
+            "-StopID": "0460",
+            "-SID": "5624",
+            "-StopName": "中山南華街口",
+            "-GoBack": "2",
+            "-seqNo": "10",
+            "-Value": "null",
+            "-comeTime": "21:43",
+            "-IVRNO": "117",
+            "-EXTVoiceNo": "0460",
+            "-schId": "3010_2_20180625213000"
+          },
+          {
+            "-StopID": "0463",
+            "-SID": "5627",
+            "-StopName": "中山三民路口",
+            "-GoBack": "2",
+            "-seqNo": "11",
+            "-Value": "null",
+            "-comeTime": "21:34",
+            "-IVRNO": "111",
+            "-EXTVoiceNo": "0463",
+            "-schId": "3010_2_20180625212000"
+          },
+          {
+            "-StopID": "0466",
+            "-SID": "5630",
+            "-StopName": "中山育樂街口",
+            "-GoBack": "2",
+            "-seqNo": "12",
+            "-Value": "null",
+            "-comeTime": "21:35",
+            "-IVRNO": "114",
+            "-EXTVoiceNo": "0466",
+            "-schId": "3010_2_20180625212000"
+          },
+          {
+            "-StopID": "0475",
+            "-SID": "1078",
+            "-StopName": "桃園市政府",
+            "-GoBack": "2",
+            "-seqNo": "13",
+            "-Value": "null",
+            "-comeTime": "21:36",
+            "-IVRNO": "508",
+            "-EXTVoiceNo": "0475",
+            "-schId": "3010_2_20180625212000"
+          },
+          {
+            "-StopID": "0477",
+            "-SID": "1107",
+            "-StopName": "土地改革館",
+            "-GoBack": "2",
+            "-seqNo": "14",
+            "-Value": "null",
+            "-comeTime": "21:38",
+            "-IVRNO": "57",
+            "-EXTVoiceNo": "0477",
+            "-schId": "3010_2_20180625212000"
+          },
+          {
+            "-StopID": "0480",
+            "-SID": "1110",
+            "-StopName": "桃園法院",
+            "-GoBack": "2",
+            "-seqNo": "15",
+            "-Value": "null",
+            "-comeTime": "21:39",
+            "-IVRNO": "496",
+            "-EXTVoiceNo": "0480",
+            "-schId": "3010_2_20180625212000"
+          },
+          {
+            "-StopID": "0484",
+            "-SID": "1114",
+            "-StopName": "中山中平路口",
+            "-GoBack": "2",
+            "-seqNo": "16",
+            "-Value": "1",
+            "-comeTime": "21:40",
+            "-IVRNO": "112",
+            "-carId": "958-FP",
+            "-EXTVoiceNo": "0484",
+            "-schId": "3010_2_20180625212000",
+            "ests": {
+              "est": {
+                "-carid": "958-FP",
+                "-est": "1",
+                "-countdowntime": "21",
+                "-islast": "0"
+              }
+            }
+          },
+          {
+            "-StopID": "0486",
+            "-SID": "1116",
+            "-StopName": "中山國小",
+            "-GoBack": "2",
+            "-seqNo": "17",
+            "-Value": "2",
+            "-comeTime": "21:42",
+            "-IVRNO": "118",
+            "-carId": "958-FP",
+            "-EXTVoiceNo": "0486",
+            "-schId": "3010_2_20180625212000",
+            "ests": {
+              "est": {
+                "-carid": "958-FP",
+                "-est": "2",
+                "-countdowntime": "21",
+                "-islast": "0"
+              }
+            }
+          },
+          {
+            "-StopID": "0489",
+            "-SID": "1119",
+            "-StopName": "武陵高中",
+            "-GoBack": "2",
+            "-seqNo": "18",
+            "-Value": "3",
+            "-comeTime": "21:43",
+            "-IVRNO": "413",
+            "-carId": "958-FP",
+            "-EXTVoiceNo": "0489",
+            "-schId": "3010_2_20180625212000",
+            "ests": {
+              "est": {
+                "-carid": "958-FP",
+                "-est": "3",
+                "-countdowntime": "21",
+                "-islast": "0"
+              }
+            }
+          },
+          {
+            "-StopID": "0495",
+            "-SID": "1125",
+            "-StopName": "宏太社區",
+            "-GoBack": "2",
+            "-seqNo": "19",
+            "-Value": "3",
+            "-comeTime": "21:44",
+            "-IVRNO": "352",
+            "-carId": "958-FP",
+            "-EXTVoiceNo": "0495",
+            "-schId": "3010_2_20180625212000",
+            "ests": {
+              "est": {
+                "-carid": "958-FP",
+                "-est": "3",
+                "-countdowntime": "21",
+                "-islast": "0"
+              }
+            }
+          },
+          {
+            "-StopID": "0497",
+            "-SID": "1127",
+            "-StopName": "茄苳溪",
+            "-GoBack": "2",
+            "-seqNo": "20",
+            "-Value": "5",
+            "-comeTime": "21:45",
+            "-IVRNO": "478",
+            "-carId": "958-FP",
+            "-EXTVoiceNo": "0497",
+            "-schId": "3010_2_20180625212000",
+            "ests": {
+              "est": {
+                "-carid": "958-FP",
+                "-est": "5",
+                "-countdowntime": "21",
+                "-islast": "0"
+              }
+            }
+          },
+          {
+            "-StopID": "0501",
+            "-SID": "1131",
+            "-StopName": "明光社區",
+            "-GoBack": "2",
+            "-seqNo": "21",
+            "-Value": "5",
+            "-comeTime": "21:46",
+            "-IVRNO": "392",
+            "-carId": "958-FP",
+            "-EXTVoiceNo": "0501",
+            "-schId": "3010_2_20180625212000",
+            "ests": {
+              "est": {
+                "-carid": "958-FP",
+                "-est": "5",
+                "-countdowntime": "21",
+                "-islast": "0"
+              }
+            }
+          },
+          {
+            "-StopID": "0503",
+            "-SID": "1133",
+            "-StopName": "中華路",
+            "-GoBack": "2",
+            "-seqNo": "22",
+            "-Value": "1",
+            "-comeTime": "21:40",
+            "-IVRNO": "165",
+            "-carId": "699-U7",
+            "-EXTVoiceNo": "0503",
+            "-schId": "3010_2_20180625211300",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "699-U7",
+                  "-est": "1",
+                  "-countdowntime": "25",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "958-FP",
+                  "-est": "6",
+                  "-countdowntime": "21",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0505",
+            "-SID": "1135",
+            "-StopName": "高城居易社區",
+            "-GoBack": "2",
+            "-seqNo": "23",
+            "-Value": "2",
+            "-comeTime": "21:40",
+            "-IVRNO": "525",
+            "-carId": "699-U7",
+            "-EXTVoiceNo": "0505",
+            "-schId": "3010_2_20180625211300",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "699-U7",
+                  "-est": "2",
+                  "-countdowntime": "25",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "958-FP",
+                  "-est": "7",
+                  "-countdowntime": "21",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0509",
+            "-SID": "1139",
+            "-StopName": "龍祥里",
+            "-GoBack": "2",
+            "-seqNo": "24",
+            "-Value": "2",
+            "-comeTime": "21:41",
+            "-IVRNO": "801",
+            "-carId": "699-U7",
+            "-EXTVoiceNo": "0509",
+            "-schId": "3010_2_20180625211300",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "699-U7",
+                  "-est": "2",
+                  "-countdowntime": "25",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "958-FP",
+                  "-est": "8",
+                  "-countdowntime": "21",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0512",
+            "-SID": "1142",
+            "-StopName": "龍壽街口",
+            "-GoBack": "2",
+            "-seqNo": "25",
+            "-Value": "3",
+            "-comeTime": "21:42",
+            "-IVRNO": "166",
+            "-carId": "699-U7",
+            "-EXTVoiceNo": "0512",
+            "-schId": "3010_2_20180625211300",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "699-U7",
+                  "-est": "3",
+                  "-countdowntime": "25",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "958-FP",
+                  "-est": "8",
+                  "-countdowntime": "21",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0514",
+            "-SID": "1144",
+            "-StopName": "署立桃園醫院",
+            "-GoBack": "2",
+            "-seqNo": "26",
+            "-Value": "3",
+            "-comeTime": "21:43",
+            "-IVRNO": "693",
+            "-carId": "699-U7",
+            "-EXTVoiceNo": "0514",
+            "-schId": "3010_2_20180625211300",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "699-U7",
+                  "-est": "3",
+                  "-countdowntime": "25",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "958-FP",
+                  "-est": "9",
+                  "-countdowntime": "21",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0518",
+            "-SID": "5635",
+            "-StopName": "漁管處",
+            "-GoBack": "2",
+            "-seqNo": "27",
+            "-Value": "5",
+            "-comeTime": "21:44",
+            "-IVRNO": "719",
+            "-carId": "699-U7",
+            "-EXTVoiceNo": "0518",
+            "-schId": "3010_2_20180625211300",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "699-U7",
+                  "-est": "5",
+                  "-countdowntime": "25",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "958-FP",
+                  "-est": "11",
+                  "-countdowntime": "21",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0519",
+            "-SID": "5636",
+            "-StopName": "內壢",
+            "-GoBack": "2",
+            "-seqNo": "28",
+            "-Value": "6",
+            "-comeTime": "21:45",
+            "-IVRNO": "220",
+            "-carId": "699-U7",
+            "-EXTVoiceNo": "0519",
+            "-schId": "3010_2_20180625211300",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "699-U7",
+                  "-est": "6",
+                  "-countdowntime": "25",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "958-FP",
+                  "-est": "12",
+                  "-countdowntime": "21",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0521",
+            "-SID": "5638",
+            "-StopName": "內壢火車站",
+            "-GoBack": "2",
+            "-seqNo": "29",
+            "-Value": "7",
+            "-comeTime": "21:47",
+            "-IVRNO": "221",
+            "-carId": "699-U7",
+            "-EXTVoiceNo": "0521",
+            "-schId": "3010_2_20180625211300",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "699-U7",
+                  "-est": "7",
+                  "-countdowntime": "25",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "958-FP",
+                  "-est": "13",
+                  "-countdowntime": "21",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0526",
+            "-SID": "1148",
+            "-StopName": "上內壢",
+            "-GoBack": "2",
+            "-seqNo": "30",
+            "-Value": "1",
+            "-comeTime": "21:41",
+            "-IVRNO": "47",
+            "-carId": "035-FX-C",
+            "-EXTVoiceNo": "0526",
+            "-schId": "3010_2_20180625210600",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "035-FX-C",
+                  "-est": "1",
+                  "-countdowntime": "29",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "699-U7",
+                  "-est": "8",
+                  "-countdowntime": "25",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "958-FP",
+                  "-est": "14",
+                  "-countdowntime": "21",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0528",
+            "-SID": "1150",
+            "-StopName": "日月光公司",
+            "-GoBack": "2",
+            "-seqNo": "31",
+            "-Value": "2",
+            "-comeTime": "21:42",
+            "-IVRNO": "247",
+            "-carId": "035-FX-C",
+            "-EXTVoiceNo": "0528",
+            "-schId": "3010_2_20180625210600",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "035-FX-C",
+                  "-est": "2",
+                  "-countdowntime": "29",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "699-U7",
+                  "-est": "9",
+                  "-countdowntime": "25",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "958-FP",
+                  "-est": "15",
+                  "-countdowntime": "21",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0532",
+            "-SID": "1154",
+            "-StopName": "自立新村",
+            "-GoBack": "2",
+            "-seqNo": "32",
+            "-Value": "2",
+            "-comeTime": "21:42",
+            "-IVRNO": "340",
+            "-carId": "035-FX-C",
+            "-EXTVoiceNo": "0532",
+            "-schId": "3010_2_20180625210600",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "035-FX-C",
+                  "-est": "2",
+                  "-countdowntime": "29",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "699-U7",
+                  "-est": "10",
+                  "-countdowntime": "25",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "958-FP",
+                  "-est": "16",
+                  "-countdowntime": "21",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0537",
+            "-SID": "1159",
+            "-StopName": "內壢國中",
+            "-GoBack": "2",
+            "-seqNo": "33",
+            "-Value": "3",
+            "-comeTime": "21:43",
+            "-IVRNO": "223",
+            "-carId": "035-FX-C",
+            "-EXTVoiceNo": "0537",
+            "-schId": "3010_2_20180625210600",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "035-FX-C",
+                  "-est": "3",
+                  "-countdowntime": "29",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "699-U7",
+                  "-est": "10",
+                  "-countdowntime": "25",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "958-FP",
+                  "-est": "17",
+                  "-countdowntime": "21",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0544",
+            "-SID": "1166",
+            "-StopName": "中壢工業區",
+            "-GoBack": "2",
+            "-seqNo": "34",
+            "-Value": "4",
+            "-comeTime": "21:45",
+            "-IVRNO": "179",
+            "-carId": "035-FX-C",
+            "-EXTVoiceNo": "0544",
+            "-schId": "3010_2_20180625210600",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "035-FX-C",
+                  "-est": "4",
+                  "-countdowntime": "29",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "699-U7",
+                  "-est": "12",
+                  "-countdowntime": "25",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "958-FP",
+                  "-est": "18",
+                  "-countdowntime": "21",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0168",
+            "-SID": "2965",
+            "-StopName": "南園路口",
+            "-GoBack": "2",
+            "-seqNo": "35",
+            "-Value": "5",
+            "-comeTime": "21:45",
+            "-IVRNO": "168",
+            "-carId": "035-FX-C",
+            "-EXTVoiceNo": "168",
+            "-schId": "3010_2_20180625210600",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "035-FX-C",
+                  "-est": "5",
+                  "-countdowntime": "29",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "699-U7",
+                  "-est": "13",
+                  "-countdowntime": "25",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "958-FP",
+                  "-est": "19",
+                  "-countdowntime": "21",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0546",
+            "-SID": "1168",
+            "-StopName": "中原",
+            "-GoBack": "2",
+            "-seqNo": "36",
+            "-Value": "5",
+            "-comeTime": "21:46",
+            "-IVRNO": "153",
+            "-carId": "035-FX-C",
+            "-EXTVoiceNo": "0546",
+            "-schId": "3010_2_20180625210600",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "035-FX-C",
+                  "-est": "5",
+                  "-countdowntime": "29",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "699-U7",
+                  "-est": "13",
+                  "-countdowntime": "25",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "958-FP",
+                  "-est": "20",
+                  "-countdowntime": "21",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0552",
+            "-SID": "1174",
+            "-StopName": "台灣拉鍊",
+            "-GoBack": "2",
+            "-seqNo": "37",
+            "-Value": "0",
+            "-comeTime": "21:47",
+            "-IVRNO": "277",
+            "-carId": "465-FT",
+            "-EXTVoiceNo": "0552",
+            "-schId": "3010_2_20180625210600",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "465-FT",
+                  "-est": "0",
+                  "-countdowntime": "62",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "FAD-583",
+                  "-est": "0",
+                  "-countdowntime": "62",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "035-FX-C",
+                  "-est": "6",
+                  "-countdowntime": "29",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "699-U7",
+                  "-est": "14",
+                  "-countdowntime": "25",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "958-FP",
+                  "-est": "20",
+                  "-countdowntime": "21",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0556",
+            "-SID": "1178",
+            "-StopName": "中壢簡易庭",
+            "-GoBack": "2",
+            "-seqNo": "38",
+            "-Value": "2",
+            "-comeTime": "21:34",
+            "-IVRNO": "198",
+            "-carId": "465-FT",
+            "-EXTVoiceNo": "0556",
+            "-schId": "3010_2_20180625205200",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "465-FT",
+                  "-est": "2",
+                  "-countdowntime": "62",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "FAD-583",
+                  "-est": "2",
+                  "-countdowntime": "62",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "035-FX-C",
+                  "-est": "7",
+                  "-countdowntime": "29",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "699-U7",
+                  "-est": "15",
+                  "-countdowntime": "25",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "958-FP",
+                  "-est": "22",
+                  "-countdowntime": "21",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0561",
+            "-SID": "1183",
+            "-StopName": "中壢聯合辦公大樓",
+            "-GoBack": "2",
+            "-seqNo": "39",
+            "-Value": "3",
+            "-comeTime": "21:35",
+            "-IVRNO": "185",
+            "-carId": "465-FT",
+            "-EXTVoiceNo": "0561",
+            "-schId": "3010_2_20180625205200",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "465-FT",
+                  "-est": "3",
+                  "-countdowntime": "62",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "FAD-583",
+                  "-est": "3",
+                  "-countdowntime": "62",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "035-FX-C",
+                  "-est": "9",
+                  "-countdowntime": "29",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "699-U7",
+                  "-est": "17",
+                  "-countdowntime": "25",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "958-FP",
+                  "-est": "23",
+                  "-countdowntime": "21",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0566",
+            "-SID": "1188",
+            "-StopName": "新街",
+            "-GoBack": "2",
+            "-seqNo": "40",
+            "-Value": "3",
+            "-comeTime": "21:37",
+            "-IVRNO": "566",
+            "-carId": "465-FT",
+            "-EXTVoiceNo": "0566",
+            "-schId": "3010_2_20180625205200",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "465-FT",
+                  "-est": "3",
+                  "-countdowntime": "62",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "FAD-583",
+                  "-est": "3",
+                  "-countdowntime": "62",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "035-FX-C",
+                  "-est": "10",
+                  "-countdowntime": "29",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "699-U7",
+                  "-est": "18",
+                  "-countdowntime": "25",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "958-FP",
+                  "-est": "24",
+                  "-countdowntime": "21",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0568",
+            "-SID": "1190",
+            "-StopName": "中壢監理站",
+            "-GoBack": "2",
+            "-seqNo": "41",
+            "-Value": "5",
+            "-comeTime": "21:38",
+            "-IVRNO": "194",
+            "-carId": "465-FT",
+            "-EXTVoiceNo": "0568",
+            "-schId": "3010_2_20180625205200",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "465-FT",
+                  "-est": "5",
+                  "-countdowntime": "62",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "FAD-583",
+                  "-est": "5",
+                  "-countdowntime": "62",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "035-FX-C",
+                  "-est": "11",
+                  "-countdowntime": "29",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "699-U7",
+                  "-est": "20",
+                  "-countdowntime": "25",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "958-FP",
+                  "-est": "26",
+                  "-countdowntime": "21",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0593",
+            "-SID": "1205",
+            "-StopName": "延平路中山路口",
+            "-GoBack": "2",
+            "-seqNo": "42",
+            "-Value": "6",
+            "-comeTime": "21:40",
+            "-IVRNO": "382",
+            "-carId": "465-FT",
+            "-EXTVoiceNo": "0593",
+            "-schId": "3010_2_20180625205200",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "465-FT",
+                  "-est": "6",
+                  "-countdowntime": "62",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "FAD-583",
+                  "-est": "6",
+                  "-countdowntime": "62",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "035-FX-C",
+                  "-est": "13",
+                  "-countdowntime": "29",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "699-U7",
+                  "-est": "21",
+                  "-countdowntime": "25",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "958-FP",
+                  "-est": "27",
+                  "-countdowntime": "21",
+                  "-islast": "0"
+                }
+              ]
+            }
+          },
+          {
+            "-StopID": "0884",
+            "-SID": "2254",
+            "-StopName": "中壢分局",
+            "-GoBack": "2",
+            "-seqNo": "43",
+            "-Value": "9",
+            "-comeTime": "21:35",
+            "-IVRNO": "181",
+            "-carId": "465-FT",
+            "-EXTVoiceNo": "0884",
+            "-schId": "3010_2_20180625204500",
+            "ests": {
+              "est": [
+                {
+                  "-carid": "465-FT",
+                  "-est": "9",
+                  "-countdowntime": "62",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "FAD-583",
+                  "-est": "9",
+                  "-countdowntime": "62",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "035-FX-C",
+                  "-est": "15",
+                  "-countdowntime": "29",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "699-U7",
+                  "-est": "23",
+                  "-countdowntime": "25",
+                  "-islast": "0"
+                },
+                {
+                  "-carid": "958-FP",
+                  "-est": "30",
+                  "-countdowntime": "21",
+                  "-islast": "0"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}
