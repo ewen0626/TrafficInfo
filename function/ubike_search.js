@@ -1,6 +1,6 @@
 var http = require("http");
 var fs = require("fs"); 
-var ubikeurl = 'http://data.tycg.gov.tw/api/v1/rest/datastore/a1b4714b-3b75-4ff8-a8f2-cc377e4eaa0f?format=json&limit=195';
+var ubikeurl = 'http://data.tycg.gov.tw/api/v1/rest/datastore/a1b4714b-3b75-4ff8-a8f2-cc377e4eaa0f?format=json&limit=199';
 var ubikedata = {};
 exports.getubikedata = function(){	//開機時先擷取一次
 	http.get(ubikeurl, function(response){

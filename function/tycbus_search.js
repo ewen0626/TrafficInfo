@@ -22,6 +22,7 @@ function BusStation(name){ //以路線之名稱取得路線之ID
 //console.log(BusStation(name))
 
 exports.getBusData = function(name){
+	name = name.toString();
 	var request = require('sync-request');
 	busurl = busurl + BusStation(name);
 	var res = request('GET', busurl);
