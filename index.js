@@ -1,6 +1,6 @@
 var express = require('express');
 var app     = express();
-var config = require('./config/config.js');
+//var config = require('./config/config.js');
 const routes = require('./routes');
 
 
@@ -15,7 +15,7 @@ routes(app) //抓取路由設定
 
 // ---- 啟動伺服器 ----
 app.listen(process.env.PORT || 8080,function(){
-	console.log("伺服器已啟動 Port : " + config.config.port);
+	console.log("伺服器已啟動 Port : " + 8080);
 	ubike.getubikedata() //擷取ubikeData
 	//console.log(tycbus.getBusData('1'));
 	//console.log(train.getTrainTime("臺北","高雄"));

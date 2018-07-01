@@ -24,5 +24,7 @@ exports.getubikedata = function(){	//開機時先擷取一次
 	
 }
 exports.getubike = function(station){ //回傳ubike站點資料
+	//station = station.toString();
+	//console.log(station)
 	return ubikedata[station]
 }

@@ -4,6 +4,7 @@ module.exports = function (app) {
   app.use('/ubike', require('./ubike'));
   app.use('/train', require('./train'));
   app.use('/tycbus', require('./tycbus'));
+  app.use('/linecallback', require('./linecallback'));
 
   // 404 page
   app.use(function (req, res) {
