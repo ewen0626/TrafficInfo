@@ -14,7 +14,7 @@ var router = express.Router();// 建立 Router 物件
 routes(app) //抓取路由設定
 
 // ---- 啟動伺服器 ----
-app.listen(Number(config.config.port),function(){
+app.listen(process.env.PORT || 8080,function(){
 	console.log("伺服器已啟動 Port : " + config.config.port);
 	ubike.getubikedata() //擷取ubikeData
 	//console.log(tycbus.getBusData('1'));
