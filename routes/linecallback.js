@@ -14,7 +14,7 @@ var bot = linebot({
 });
 bot.on('message', function(event) {
     //console.log(event); // 把收到訊息的 event 印出來
-	if (event.message.type = 'text') {
+	if (event.message.type = 'text'&& event.message.text!= undefined) {
 		var msg = event.message.text;
 		msg_index = msg.indexOf(" ") //抓取指令類型
 		command = msg.substring(0,msg_index)
