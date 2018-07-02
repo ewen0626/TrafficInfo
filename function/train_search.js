@@ -20,8 +20,13 @@ exports.getTrainTime = function (StartStation,EndStation){
 	var timeYear = time.getYear();	
 	StartStation = TrainStation.StationCode(StartStation);
 	EndStation = TrainStation.StationCode(EndStation);
-	StartStation = StartStation.toString();
-	EndStation =  EndStation.toString();
+	if (StartStation ==undefined || EndStation == undefined){ //判斷車站是否輸入正確
+		console.log("車站輸入錯誤");
+		return false
+	}else{
+		StartStation = StartStation.toString();
+		EndStation =  EndStation.toString();
+	}
 	var arr2 = arr.filter(function(value,index,array){ //篩選起站
 		var data = value.TimeInfos.some(function(value){
 			return value.Station == StartStation //1011 = 板橋
@@ -77,9 +82,9 @@ exports.getTrainTime = function (StartStation,EndStation){
 		
 	})
 	var nowtime = timeYear+1900+"/"+ timeMonth +"/" + timeDate + " " + timeHour + ":" + timeMinutes;
-	console.log(nowtime)
+	//console.log(nowtime)
 	var today = timeYear+1900+"/"+ timeMonth +"/" + timeDate
-	console.log("NOWTIMETAG = "+(Date.parse(nowtime)).valueOf())
+	//console.log("NOWTIMETAG = "+(Date.parse(nowtime)).valueOf())
 	var final = arr5.filter(function(value,index,array){
 		var Traintimetag = today + " " + value.TimeInfos[0].DepTime;
 		Traintimetag = Date.parse(Traintimetag).valueOf();
