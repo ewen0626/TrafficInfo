@@ -18,7 +18,9 @@ app.listen(process.env.PORT || 8080,function(){
 	console.log("伺服器已啟動 Port : " + 8080);
 	ubike.getubikedata() //擷取ubikeData
 	//console.log(tycbus.getBusData('1'));
-	//console.log(train.getTrainTime("臺北","高雄"));
+	var a = "中壢"
+	var b = "板橋"
+	//train.getTrainTime(a,b)
 	
 });
 

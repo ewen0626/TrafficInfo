@@ -1,7 +1,6 @@
 ﻿const express = require('express');
 
 var ubike = require('../function/ubike_search.js');
-var train = require('../function/train_search.js');
 var TrainStation  = require('../function/TrainStation.js');
 const router = express.Router()
 var linebot = require('linebot');
@@ -38,8 +37,11 @@ bot.on('message', function(event) {
 				event.reply(reply);
 				break;
 			case '火車':
-				var StartStation = command[1]
-				var EndStation = command[2]
+				var train = require('../function/train_search.js');
+				var StartStation = command[1];
+				var EndStation = command[2];
+				console.log("StartStation="+StartStation)
+				console.log("EndStation="+EndStation)
 				var limit = Number(command[3]) ;
 				if(isNaN(limit)){ //檢查有沒有輸入LIMIT，若無就預設為3筆資料
 					limit = 3;
@@ -47,22 +49,21 @@ bot.on('message', function(event) {
 					limit = command[3];
 				}
 				var reply = '';
-				if (StartStation == undefined || EndStation ==undefined){
-					reply =emoji.get('crossed_swords') + "車站輸入錯誤";
+				var traindata = train.getTrainTime(StartStation,EndStation)
+				console.log("資料 :  " + traindata);
+				if (traindata == "車站名稱輸入錯誤"){
+					//console.log("1");
+					reply = emoji.get('crossed_swords') + "車站輸入錯誤";	
+				}else if(traindata == ""){
+					reply = emoji.get('crossed_swords') + "無資料";
 				}else{
-					var traindata = train.getTrainTime(StartStation,EndStation)
-					console.log(traindata);
-					if (traindata ==false){
-						reply = emoji.get('crossed_swords') + "車站輸入錯誤";
-					}else{
-						console.log("資料數量 = "+traindata.length)
-						limit = (limit>=traindata.length)?traindata.length:limit
-							for (var i = 0; i<limit; i++){
-								reply = reply + 
-								'\n' + emoji.get(':train:') + traindata[i].Train + emoji.get(':train2:')+ TrainStation.TrainClass(traindata[i].CarClass) + "\n" + 
-								emoji.get('clock2') + traindata[i].TimeInfos[0].DepTime  +  emoji.get(':calendar:') + traindata[i].TimeInfos[1].ArrTime + "\n"		
-							}
-					}
+					console.log("資料數量 = "+traindata.length)
+					limit = (limit>=traindata.length)?traindata.length:limit
+						for (var i = 0; i<limit; i++){
+							reply = reply + 
+							'\n' + emoji.get(':train:') + traindata[i].Train + emoji.get(':train2:')+ TrainStation.TrainClass(traindata[i].CarClass) + "\n" + 
+							emoji.get('clock2') + traindata[i].TimeInfos[0].DepTime  +  emoji.get(':calendar:') + traindata[i].TimeInfos[1].ArrTime + "\n"		
+						}
 				}
 				event.reply(reply);
 				break;

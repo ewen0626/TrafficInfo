@@ -6,10 +6,13 @@
 4.將車次依照時間排序
 5.判斷時間戳，排除已過之班次
 */
-var traindata = require('./20180622.json');
-var TrainStation  = require('./TrainStation.js');
+
+
 exports.getTrainTime = function (StartStation,EndStation){
-	var arr = traindata.TrainInfos;
+	var TrainStation  = require('./TrainStation.js');
+	var traindata = require('./20180622.json');
+	var arr =  traindata.TrainInfos;
+	console.log("ARR = " + arr);
 	d = new Date();
 	utc = d.getTime() + (d.getTimezoneOffset() * 60000);
 	var time=new Date(utc + (3600000*8));
@@ -20,14 +23,17 @@ exports.getTrainTime = function (StartStation,EndStation){
 	var timeYear = time.getYear();	
 	StartStation = TrainStation.StationCode(StartStation);
 	EndStation = TrainStation.StationCode(EndStation);
-	if (StartStation ==undefined || EndStation == undefined){ //判斷車站是否輸入正確
+	final = '';
+	if (StartStation === undefined || EndStation === undefined){ //判斷車站是否輸入正確
 		console.log("車站輸入錯誤");
-		return false
+		return "車站名稱輸入錯誤"
 	}else{
+		console.log("SEAStartStation="+StartStation)
+		console.log("SEAEndStation="+EndStation)
 		StartStation = StartStation.toString();
 		EndStation =  EndStation.toString();
 	}
-	var arr2 = arr.filter(function(value,index,array){ //篩選起站
+	var arr = arr.filter(function(value,index,array){ //篩選起站
 		var data = value.TimeInfos.some(function(value){
 			return value.Station == StartStation //1011 = 板橋
 		})
@@ -36,8 +42,8 @@ exports.getTrainTime = function (StartStation,EndStation){
 			return value
 		}
 	})
-
-	var arr3 = arr2.filter(function(value,index,array){ //篩選迄站
+	//console.log('arr2 = ' + arr2)
+	var arr = arr.filter(function(value,index,array){ //篩選迄站
 		var data = value.TimeInfos.some(function(value){
 			return value.Station == EndStation //1008 = 台北  1025 = 新竹
 		})
@@ -46,37 +52,45 @@ exports.getTrainTime = function (StartStation,EndStation){
 			return value
 		}
 	})
+	//console.log('arr3 = ' + arr3)
 
-
-	var arr4 = arr3.filter(function(value,index,array){ //判斷南下北上
+	var arr = arr.filter(function(value,index,array){ //判斷南下北上
 		var StartStationIndex =value.TimeInfos.map(function(item, index) { //抓取起站之索引值
 			//console.log(item.Station)
 			return item.Station
 		}).indexOf(StartStation); 
-		
+		//console.log(StartStationIndex.indexOf(StartStation));
+		//console.log("StartStationIndex = "+typeof(StartStationIndex)  + StartStationIndex )
 		var EndStationIndex =value.TimeInfos.map(function(item, index) {  //抓取迄站索引值
 			//console.log(item.Station)
 			return item.Station
 		}).indexOf(EndStation);
+		//console.log("EndStationIndex = "+typeof(EndStationIndex)  + EndStationIndex )
 		if (StartStationIndex < EndStationIndex) //如起站之索引大於迄站之索引，表示車次為反向車輛
 		{
+			StartStationIndex = Number(StartStationIndex);
+			EndStationIndex = Number(EndStationIndex);
 			var StartStation_data = value.TimeInfos[StartStationIndex];
+			//console.log("StartStation_data = " + StartStation_data)
 			var EndStation_data = value.TimeInfos[EndStationIndex];
+			//console.log("EndStation_data = " + EndStation_data)
 			value.TimeInfos.length = 2;
 			value.TimeInfos[0] = StartStation_data;  //將其餘站資料刪掉，留下起站[0]迄站[1]
 			value.TimeInfos[1] = EndStation_data;
 			return value
 		}
 	})
-	var arr5 = arr4.sort(function(a,b){ //排序
-		/*var StartStation_a =a.TimeInfos.map(function(item, index) { //抓取起站之索引值
+	//console.log('arr3_ = ' +arr3)
+	//console.log('arr4 = ' + arr4)
+	var arr = arr.sort(function(a,b){ //排序
+		var StartStation_a =a.TimeInfos.map(function(item, index) { //抓取起站之索引值
 			return item.Station
-		}).indexOf('1011');
+		}).indexOf(StartStation);
 
 		var StartStation_b =b.TimeInfos.map(function(item, index) { //抓取起站之索引值
 
 			return item.Station
-		}).indexOf('1011');*/
+		}).indexOf(EndStation);
 
 		return a.TimeInfos[0].DepTime > b.TimeInfos[0].DepTime ? 1: -1;
 		
@@ -85,7 +99,7 @@ exports.getTrainTime = function (StartStation,EndStation){
 	//console.log(nowtime)
 	var today = timeYear+1900+"/"+ timeMonth +"/" + timeDate
 	//console.log("NOWTIMETAG = "+(Date.parse(nowtime)).valueOf())
-	var final = arr5.filter(function(value,index,array){
+	arr = arr.filter(function(value,index,array){
 		var Traintimetag = today + " " + value.TimeInfos[0].DepTime;
 		Traintimetag = Date.parse(Traintimetag).valueOf();
 		var nowtimetag = Date.parse(nowtime).valueOf();
@@ -103,8 +117,14 @@ exports.getTrainTime = function (StartStation,EndStation){
 		return value
 	})*/
 	//console.log(final);
-	return final
-	arr = "";
+	//console.log("final = "+ final);
+	//console.log(typeof(final))
+	/*arr = '';
+	arr2 = '';
+	arr3 = '';
+	arr4 = '';
+	arr5 = '';*/
+	return arr
 }
 //console.log(TrainStation.TrainClass('1120'))
 //getTrainTime(1011,1025)
