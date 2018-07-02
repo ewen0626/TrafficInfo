@@ -2,6 +2,7 @@
 
 var ubike = require('../function/ubike_search.js');
 var train = require('../function/train_search.js');
+var TrainStation  = require('../function/TrainStation.js');
 const router = express.Router()
 var linebot = require('linebot');
 const config = require('../config.json'),
@@ -39,16 +40,29 @@ bot.on('message', function(event) {
 			case '火車':
 				var StartStation = command[1]
 				var EndStation = command[2]
-				var limit = command[3]
+				var limit = Number(command[3]) ;
+				if(isNaN(limit)){
+					limit = 3;
+				}else{
+					limit = command[3];
+				}
 				var reply = '';
 				if (StartStation == undefined || EndStation ==undefined){
 					reply = "車站輸入錯誤";
 				}else{
 					var traindata = train.getTrainTime(StartStation,EndStation)
-					//console.log(traindata)
-					for (var i = 0; i<limit; i++){
-						reply = reply + 
-						"車次" + traindata[i].Train + "車輛種類" + traindata[i].CarClass + "開車時間" + traindata[i].TimeInfos[0].DepTime
+					console.log("資料數量 = "+traindata.length)
+					if (limit>=traindata.length){
+						traindata.forEach(function(traindata){
+							reply = reply + 
+							"車次" + traindata.Train + "車種" + TrainStation.TrainClass(traindata.CarClass) +  "出發" + traindata.TimeInfos[0].DepTime + "到達" + traindata.TimeInfos[1].ArrTime + "\n" 
+						})
+					}else{
+						for (var i = 0; i<limit; i++){
+							console.log("for")
+							reply = reply + 
+							'\n'+emoji.get(':train:') + traindata[i].Train +emoji.get(':train2:')+ TrainStation.TrainClass(traindata[i].CarClass) + "\n" + emoji.get('clock2') + traindata[i].TimeInfos[0].DepTime +  emoji.get(':calendar:') + traindata[i].TimeInfos[1].ArrTime + "\n"		
+						}
 					}
 				}
 				event.reply(reply);

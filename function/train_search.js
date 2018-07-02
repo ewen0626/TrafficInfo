@@ -8,7 +8,6 @@
 */
 var traindata = require('./20180622.json');
 var TrainStation  = require('./TrainStation.js');
-var arr = traindata.TrainInfos;
 exports.getTrainTime = function (StartStation,EndStation){
 	var arr = traindata.TrainInfos;
 	d = new Date();
@@ -92,14 +91,15 @@ exports.getTrainTime = function (StartStation,EndStation){
 			return false
 		}	
 	})
-	
-	final = final.map(function(value){
-		value.CarClass = TrainStation.TrainClass(value.CarClass)
+	//console.log(final)
+	/*final = final.map(function(value){
+		var CarClass = value.CarClass;
+		value.CarClass = TrainStation.TrainClass(CarClass)
 		return value
-	})
+	})*/
 	//console.log(final);
 	return final
-	final = "";
+	arr = "";
 }
 //console.log(TrainStation.TrainClass('1120'))
 //getTrainTime(1011,1025)
