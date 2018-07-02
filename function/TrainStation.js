@@ -290,6 +290,8 @@ exports.StationCode = function(station){
 	
 }
 exports.TrainClass = function(carclass){
+	//carclass = carclass.toString();
+	console.log(carclass)
 	return TrainClass[carclass]
 	
 }

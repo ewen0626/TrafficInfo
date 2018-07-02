@@ -10,6 +10,7 @@ var traindata = require('./20180622.json');
 var TrainStation  = require('./TrainStation.js');
 var arr = traindata.TrainInfos;
 exports.getTrainTime = function (StartStation,EndStation){
+	var arr = traindata.TrainInfos;
 	d = new Date();
 	utc = d.getTime() + (d.getTimezoneOffset() * 60000);
 	var time=new Date(utc + (3600000*8));
@@ -98,6 +99,7 @@ exports.getTrainTime = function (StartStation,EndStation){
 	})
 	//console.log(final);
 	return final
+	final = "";
 }
 //console.log(TrainStation.TrainClass('1120'))
 //getTrainTime(1011,1025)
