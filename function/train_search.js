@@ -7,10 +7,19 @@
 5.判斷時間戳，排除已過之班次
 */
 
-
-exports.getTrainTime = function (StartStation,EndStation){
+module.exports= function (StartStation,EndStation){
 	var TrainStation  = require('./TrainStation.js');
 	var traindata = require('./20180622.json');
+	var reload = require('require-reload')(require),
+    traindata = reload('./20180622.json');
+	arr = null;
+	try {
+		console.log("RELOADED")
+		traindata = reload('./20180622.json');
+	} catch (e) {
+		//if this threw an error, the api variable is still set to the old, working version
+		console.error("Failed to reload api.js! Error: ", e);
+	}
 	var arr =  traindata.TrainInfos;
 	console.log("ARR = " + arr);
 	d = new Date();
@@ -23,7 +32,6 @@ exports.getTrainTime = function (StartStation,EndStation){
 	var timeYear = time.getYear();	
 	StartStation = TrainStation.StationCode(StartStation);
 	EndStation = TrainStation.StationCode(EndStation);
-	final = '';
 	if (StartStation === undefined || EndStation === undefined){ //判斷車站是否輸入正確
 		console.log("車站輸入錯誤");
 		return "車站名稱輸入錯誤"
@@ -60,24 +68,26 @@ exports.getTrainTime = function (StartStation,EndStation){
 			return item.Station
 		}).indexOf(StartStation); 
 		//console.log(StartStationIndex.indexOf(StartStation));
-		//console.log("StartStationIndex = "+typeof(StartStationIndex)  + StartStationIndex )
+		console.log("StartStationIndex = "+typeof(StartStationIndex)  + StartStationIndex )
 		var EndStationIndex =value.TimeInfos.map(function(item, index) {  //抓取迄站索引值
 			//console.log(item.Station)
 			return item.Station
 		}).indexOf(EndStation);
-		//console.log("EndStationIndex = "+typeof(EndStationIndex)  + EndStationIndex )
+		console.log("EndStationIndex = "+typeof(EndStationIndex)  + EndStationIndex )
 		if (StartStationIndex < EndStationIndex) //如起站之索引大於迄站之索引，表示車次為反向車輛
 		{
 			StartStationIndex = Number(StartStationIndex);
 			EndStationIndex = Number(EndStationIndex);
 			var StartStation_data = value.TimeInfos[StartStationIndex];
-			//console.log("StartStation_data = " + StartStation_data)
+			console.log("StartStation_data = " + StartStation_data)
 			var EndStation_data = value.TimeInfos[EndStationIndex];
-			//console.log("EndStation_data = " + EndStation_data)
+			console.log("EndStation_data = " + EndStation_data)
 			value.TimeInfos.length = 2;
 			value.TimeInfos[0] = StartStation_data;  //將其餘站資料刪掉，留下起站[0]迄站[1]
 			value.TimeInfos[1] = EndStation_data;
 			return value
+		}else{
+			return false 
 		}
 	})
 	//console.log('arr3_ = ' +arr3)

@@ -20,7 +20,7 @@ app.listen(process.env.PORT || 8080,function(){
 	//console.log(tycbus.getBusData('1'));
 	var a = "中壢"
 	var b = "板橋"
-	//train.getTrainTime(a,b)
+	//console.log(train(a,b).length)
 	
 });
 
@@ -48,3 +48,12 @@ setInterval(function(){
 });	
 	console.log('GET成功');		
 },1080000);
+
+/*StartStationIndex = number10
+EndStationIndex = number18
+StartStation_data = [object Object]
+EndStation_data = [object Object]
+StartStationIndex = number20
+EndStationIndex = number12
+StartStationIndex = number6
+EndStationIndex = number4*/

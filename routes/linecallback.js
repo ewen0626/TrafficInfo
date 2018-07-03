@@ -1,12 +1,17 @@
 ﻿const express = require('express');
 
 var ubike = require('../function/ubike_search.js');
+var train = require('../function/train_search.js');
 var TrainStation  = require('../function/TrainStation.js');
 const router = express.Router()
 var linebot = require('linebot');
 const config = require('../config.json'),
 	util = require('util');
-var emoji = require('node-emoji')
+	
+/*var reload = require('require-reload')(require),
+    train = reload('../function/train_search.js');*/
+var emoji = require('node-emoji');
+
 var bot = linebot({
     channelId: config.channelId,
     channelSecret: config.channelSecret,
@@ -37,7 +42,6 @@ bot.on('message', function(event) {
 				event.reply(reply);
 				break;
 			case '火車':
-				var train = require('../function/train_search.js');
 				var StartStation = command[1];
 				var EndStation = command[2];
 				console.log("StartStation="+StartStation)
@@ -49,7 +53,15 @@ bot.on('message', function(event) {
 					limit = command[3];
 				}
 				var reply = '';
-				var traindata = train.getTrainTime(StartStation,EndStation)
+				
+	/*			try {
+					console.log("RELOADED")
+					train = reload('../function/train_search.js');
+				} catch (e) {
+					//if this threw an error, the api variable is still set to the old, working version
+					console.error("Failed to reload api.js! Error: ", e);
+				}*/
+				var traindata =  train(StartStation,EndStation)
 				console.log("資料 :  " + traindata);
 				if (traindata == "車站名稱輸入錯誤"){
 					//console.log("1");
