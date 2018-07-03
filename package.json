@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ewen0626/TrafficInfo#readme",
   "dependencies": {
+    "ejs": "^2.6.1",
     "express": "^4.16.3",
     "linebot": "^1.4.1",
     "node-emoji": "^1.8.1",

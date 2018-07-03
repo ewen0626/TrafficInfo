@@ -3,6 +3,7 @@
 var ubike = require('../function/ubike_search.js');
 var train = require('../function/train_search.js');
 var TrainStation  = require('../function/TrainStation.js');
+var tycbus = require('../function/tycbus_search.js');
 const router = express.Router()
 var linebot = require('linebot');
 const config = require('../config.json'),
@@ -44,8 +45,8 @@ bot.on('message', function(event) {
 			case '火車':
 				var StartStation = command[1];
 				var EndStation = command[2];
-				console.log("StartStation="+StartStation)
-				console.log("EndStation="+EndStation)
+				//console.log("StartStation="+StartStation)
+			//	console.log("EndStation="+EndStation)
 				var limit = Number(command[3]) ;
 				if(isNaN(limit)){ //檢查有沒有輸入LIMIT，若無就預設為3筆資料
 					limit = 3;
@@ -80,11 +81,43 @@ bot.on('message', function(event) {
 				event.reply(reply);
 				break;
 			case '公車':
-				var reply =  emoji.get(':punch:') + "敬請期待"
+				var reply = "";
+				var RouteName = command[1];
+				var busdata = tycbus.getBusData(RouteName);
+				//console.log(busdata);
+				if (busdata == "路線輸入錯誤"){
+					var reply = emoji.get('crossed_swords')+ busdata
+				}else{
+					busdata_go =  busdata.filter(function(value){
+						return value['$'].GoBack == 1
+						//console.log("value  = " + value['$'].GoBack)
+					})
+					busdata_back = busdata.filter(function(value){
+						return value['$'].GoBack == 2					
+					})
+					reply  = emoji.get(':heavy_minus_sign:')+emoji.get(':heavy_minus_sign:')+emoji.get(':heavy_minus_sign:')+"去程"+emoji.get(':heavy_minus_sign:')+ emoji.get(':heavy_minus_sign:')+emoji.get(':heavy_minus_sign:')+"\n"
+					busdata_go.forEach(function(value){
+						//console.log(value['$'].StopName + value['$'].comeTime)
+						reply += "  " + value['$'].StopName + value['$'].comeTime + "\n"
+					})
+					reply  += emoji.get(':heavy_minus_sign:')+emoji.get(':heavy_minus_sign:')+emoji.get(':heavy_minus_sign:')+"回程"+emoji.get(':heavy_minus_sign:')+ emoji.get(':heavy_minus_sign:')+emoji.get(':heavy_minus_sign:')+"\n"
+					busdata_back.forEach(function(value){
+						//console.log(value['$'].StopName + value['$'].comeTime)
+						reply += "  " +  value['$'].StopName + value['$'].comeTime + "\n"
+					})
+				}
 				event.reply(reply);
 				break;
+			case 'help':
+				var reply = emoji.get(':new:') + emoji.get(':new:') + emoji.get(':new:') + emoji.get(':new:') + emoji.get(':new:') + "\n" +
+					emoji.get(':one:') + "ubike指令 " + emoji.get(':arrow_heading_down:') + "\nubike [站點名稱] \n" +
+					emoji.get(':two:') +"火車指令 " + emoji.get(':arrow_heading_down:') + "\n火車 [起站] [迄站] [數量] \n" +
+					emoji.get(':three:') +"公車指令 "+ emoji.get(':arrow_heading_down:') + "\n公車 [路線名稱]"
+					event.reply(reply);
+				break;
 			default:
-				var reply =  emoji.get('u7981') + "無此指令或無資料"
+				var reply =  emoji.get('u7981') + "無此指令或無資料\n"+
+						emoji.get(':star:') + "請輸入 help 已取得指令資訊"
 				event.reply(reply);
 				
 		}

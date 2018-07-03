@@ -1,10 +1,10 @@
 module.exports = function (app) {
-	
-  app.use('/',require('./homepage'));
-  app.use('/ubike', require('./ubike'));
-  app.use('/train', require('./train'));
-  app.use('/tycbus', require('./tycbus'));
-  app.use('/linecallback', require('./linecallback'));
+//  app.set('view engine', 'ejs');
+  app.use('/',require('./homepage.js'));
+  app.use('/ubike', require('./ubike.js'));
+  app.use('/train', require('./train.js'));
+  app.use('/tycbus', require('./tycbus.js'));
+  app.use('/linecallback', require('./linecallback.js'));
 
   // 404 page
   app.use(function (req, res) {

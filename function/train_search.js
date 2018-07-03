@@ -14,7 +14,7 @@ module.exports= function (StartStation,EndStation){
     traindata = reload('./20180622.json');
 	arr = null;
 	try {
-		console.log("RELOADED")
+		//console.log("RELOADED")
 		traindata = reload('./20180622.json');
 	} catch (e) {
 		//if this threw an error, the api variable is still set to the old, working version
@@ -36,8 +36,8 @@ module.exports= function (StartStation,EndStation){
 		console.log("車站輸入錯誤");
 		return "車站名稱輸入錯誤"
 	}else{
-		console.log("SEAStartStation="+StartStation)
-		console.log("SEAEndStation="+EndStation)
+	//	console.log("SEAStartStation="+StartStation)
+		//console.log("SEAEndStation="+EndStation)
 		StartStation = StartStation.toString();
 		EndStation =  EndStation.toString();
 	}
@@ -68,20 +68,20 @@ module.exports= function (StartStation,EndStation){
 			return item.Station
 		}).indexOf(StartStation); 
 		//console.log(StartStationIndex.indexOf(StartStation));
-		console.log("StartStationIndex = "+typeof(StartStationIndex)  + StartStationIndex )
+		//console.log("StartStationIndex = "+typeof(StartStationIndex)  + StartStationIndex )
 		var EndStationIndex =value.TimeInfos.map(function(item, index) {  //抓取迄站索引值
 			//console.log(item.Station)
 			return item.Station
 		}).indexOf(EndStation);
-		console.log("EndStationIndex = "+typeof(EndStationIndex)  + EndStationIndex )
+		//console.log("EndStationIndex = "+typeof(EndStationIndex)  + EndStationIndex )
 		if (StartStationIndex < EndStationIndex) //如起站之索引大於迄站之索引，表示車次為反向車輛
 		{
 			StartStationIndex = Number(StartStationIndex);
 			EndStationIndex = Number(EndStationIndex);
 			var StartStation_data = value.TimeInfos[StartStationIndex];
-			console.log("StartStation_data = " + StartStation_data)
+			//console.log("StartStation_data = " + StartStation_data)
 			var EndStation_data = value.TimeInfos[EndStationIndex];
-			console.log("EndStation_data = " + EndStation_data)
+			//console.log("EndStation_data = " + EndStation_data)
 			value.TimeInfos.length = 2;
 			value.TimeInfos[0] = StartStation_data;  //將其餘站資料刪掉，留下起站[0]迄站[1]
 			value.TimeInfos[1] = EndStation_data;
