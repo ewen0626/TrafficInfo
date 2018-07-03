@@ -115,6 +115,117 @@ bot.on('message', function(event) {
 					emoji.get(':three:') +"公車指令 "+ emoji.get(':arrow_heading_down:') + "\n公車 [路線名稱]"
 					event.reply(reply);
 				break;
+			case '測試地圖':
+				var reply = {
+				  "type": "imagemap",
+				  "baseUrl": "https://upload.wikimedia.org/wikipedia/zh/thumb/8/8c/Chien_Hsin_University_of_Science_and_Technology_logo.svg/1024px-Chien_Hsin_University_of_Science_and_Technology_logo.svg.png?",
+				  "altText": "在不支援顯示影像地圖的地方顯示的文字",
+				  "baseSize": {
+					"height": 1040,
+					"width": 1040
+				  },
+				  "actions": [
+					{
+					  "type": "uri",
+					  "linkUri": "https://www.kamigo.tw/",
+					  "label": "https://www.kamigo.tw/",
+					  "area": {
+						"x": 0,
+						"y": 0,
+						"width": 520,
+						"height": 1040
+					  }
+					},
+					{
+					  "type": "message",
+					  "text": "傳送文字",
+					  "area": {
+						"x": 520,
+						"y": 0,
+						"width": 520,
+						"height": 1040
+					  }
+					}
+				  ]
+				}
+				event.reply(reply);
+				break;
+			case "測試樣板" :
+				reply = {
+				  "type": "template",
+				  "altText": "在不支援顯示樣板的地方顯示的文字",
+				  "template": {
+					"type": "image_carousel",
+					"columns": [
+					  {
+						"imageUrl": "https://upload.wikimedia.org/wikipedia/zh/thumb/8/8c/Chien_Hsin_University_of_Science_and_Technology_logo.svg/1024px-Chien_Hsin_University_of_Science_and_Technology_logo.svg.png?",
+						"action": {
+						  "type": "message",
+						  "label": "第一張圖",
+						  "text": "1"
+						}
+					  },
+					  {
+						"imageUrl": "https://i.imgur.com/bdXpTZV.jpg?",
+						"action": {
+						  "type": "message",
+						  "label": "第二張圖",
+						  "text": "2"
+						}
+					  },
+					  {
+						"imageUrl": "https://i.imgur.com/bdXpTZV.jpg?",
+						"action": {
+						  "type": "message",
+						  "label": "第二張圖",
+						  "text": "2"
+						}
+					  },
+					  {
+						"imageUrl": "https://i.imgur.com/bdXpTZV.jpg?",
+						"action": {
+						  "type": "message",
+						  "label": "第二張圖",
+						  "text": "2"
+						}
+					  },
+					  {
+						"imageUrl": "https://i.imgur.com/bdXpTZV.jpg?",
+						"action": {
+						  "type": "message",
+						  "label": "第二張圖",
+						  "text": "2"
+						}
+					  },
+					  {
+						"imageUrl": "https://i.imgur.com/bdXpTZV.jpg?",
+						"action": {
+						  "type": "message",
+						  "label": "第二張圖",
+						  "text": "2"
+						}
+					  },
+					  {
+						"imageUrl": "https://i.imgur.com/bdXpTZV.jpg?",
+						"action": {
+						  "type": "message",
+						  "label": "第二張圖",
+						  "text": "2"
+						}
+					  },
+					  {
+						"imageUrl": "https://i.imgur.com/bdXpTZV.jpg?",
+						"action": {
+						  "type": "message",
+						  "label": "第二張圖",
+						  "text": "2"
+						}
+					  }
+					]
+				  }
+				}
+				event.reply(reply);
+				break;
 			default:
 				var reply =  emoji.get('u7981') + "無此指令或無資料\n"+
 						emoji.get(':star:') + "請輸入 help 已取得指令資訊"
