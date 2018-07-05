@@ -127,8 +127,8 @@ bot.on('message', function(event) {
 				  "actions": [
 					{
 					  "type": "uri",
-					  "linkUri": "https://www.kamigo.tw/",
-					  "label": "https://www.kamigo.tw/",
+					  "linkUri": "http://twtraffic.tra.gov.tw/twrail/mobile/TrainDetail.aspx?searchdate=2018/07/06&traincode=129",
+					  "label": "測試火車細節",
 					  "area": {
 						"x": 0,
 						"y": 0,
@@ -138,7 +138,7 @@ bot.on('message', function(event) {
 					},
 					{
 					  "type": "message",
-					  "text": "傳送文字",
+					  "text": "梓宸帥",
 					  "area": {
 						"x": 520,
 						"y": 0,
