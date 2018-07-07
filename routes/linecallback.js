@@ -19,7 +19,22 @@ var bot = linebot({
     channelAccessToken: config.channelAccessToken
 });
 bot.on('message', function(event) {
-    //console.log(event); // 把收到訊息的 event 印出來
+	d = new Date();
+	utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+	var time=new Date(utc + (3600000*8));
+	var timeHour=time.getHours(); 
+	var timeMinutes=time.getMinutes(); 
+	var timeMonth=time.getMonth()+1; 
+	var timeDate=time.getDate();
+	var timeYear = time.getYear();	
+	if (timeMonth.length = 1){
+		timeMonth = "0" + timeMonth;
+	}
+	if (timeDate.length = 1){
+		timeDate = "0" + timeDate;
+	}
+	var today = timeYear+1900 + "/" + timeMonth + "/" + timeDate
+	console.log(today)
 	if (event.message.type = 'text'&& event.message.text!= undefined) {
 		var msg = event.message.text;
 		//msg_index = msg.indexOf(" ") //抓取指令類型
@@ -60,16 +75,8 @@ bot.on('message', function(event) {
 					limit = command[3];
 				}
 				var reply = '';
-				
-	/*			try {
-					console.log("RELOADED")
-					train = reload('../function/train_search.js');
-				} catch (e) {
-					//if this threw an error, the api variable is still set to the old, working version
-					console.error("Failed to reload api.js! Error: ", e);
-				}*/
 				var traindata =  train(StartStation,EndStation)
-				console.log("資料 :  " + traindata);
+				//console.log("資料 :  " + traindata);
 				if (traindata == "車站名稱輸入錯誤"){
 					//console.log("1");
 					reply = emoji.get('crossed_swords') + "車站輸入錯誤";	
@@ -77,12 +84,66 @@ bot.on('message', function(event) {
 					reply = emoji.get('crossed_swords') + "無資料";
 				}else{
 					console.log("資料數量 = "+traindata.length)
+					
 					limit = (limit>=traindata.length)?traindata.length:limit
+					if(limit >= 10){
 						for (var i = 0; i<limit; i++){
 							reply = reply + 
 							'\n' + emoji.get(':train:') + traindata[i].Train + emoji.get(':train2:')+ TrainStation.TrainClass(traindata[i].CarClass) + "\n" + 
 							emoji.get('clock2') + traindata[i].TimeInfos[0].DepTime  +  emoji.get(':calendar:') + traindata[i].TimeInfos[1].ArrTime + "\n"		
 						}
+					}else{
+						reply = {
+						  "type": "template",
+						  "altText": "在不支援顯示樣板的地方顯示的文字",
+						  "template": {
+							"type": "carousel",
+							"imageAspectRatio": "rectangle",
+							"imageSize": "contain",
+							"columns": []
+						  }
+						}
+						for (var i = 0; i<limit; i++){
+							var imgUrl = ""
+							switch (TrainStation.TrainClass(traindata[i].CarClass)){
+								case "區間車":
+									imgUrl = "https://twtrafficinfo.herokuapp.com/img/區間.png"
+									break;
+								case "自強(普悠瑪)":
+									imgUrl = "https://twtrafficinfo.herokuapp.com/img/普悠瑪.png"
+									break;
+								case "莒光":
+									imgUrl = "https://twtrafficinfo.herokuapp.com/img/莒光.png"
+									break;
+								case "自強(太魯閣)":
+									imgUrl = "https://twtrafficinfo.herokuapp.com/img/太魯閣.png"
+									break;
+								case "自強":
+									imgUrl = "https://twtrafficinfo.herokuapp.com/img/自強.png"
+									break;
+								default:
+							}
+							var template_columns = {
+									"thumbnailImageUrl": imgUrl,
+									"imageBackgroundColor": "#FFFFFF",
+									"title": emoji.get('clock2') + traindata[i].TimeInfos[0].DepTime +  emoji.get(':calendar:') + traindata[i].TimeInfos[1].ArrTime,
+									"text": emoji.get(':train:') + traindata[i].Train + emoji.get(':train2:')+ TrainStation.TrainClass(traindata[i].CarClass),
+									"defaultAction": {
+										"type": "uri",
+										"label": "點到圖片或標題",
+										"uri": "http://twtraffic.tra.gov.tw/twrail/mobile/TrainDetail.aspx?searchdate="+today+"&traincode="+traindata[i].Train 
+									},
+									"actions": [
+									  {
+										"type": "message",
+										"label": "回主頁面",
+										"text": "梓宸帥"
+									  }
+									]
+							}	
+							reply.template.columns.push(template_columns);
+						}						
+					}
 				}
 				event.reply(reply);
 				break;
@@ -136,75 +197,32 @@ bot.on('message', function(event) {
 				  "type": "template",
 				  "altText": "在不支援顯示樣板的地方顯示的文字",
 				  "template": {
-					"type": "image_carousel",
+					"type": "carousel",
+					"imageAspectRatio": "rectangle",
+					"imageSize": "contain",
 					"columns": [
-					  {
-						"imageUrl": "https://upload.wikimedia.org/wikipedia/zh/thumb/8/8c/Chien_Hsin_University_of_Science_and_Technology_logo.svg/1024px-Chien_Hsin_University_of_Science_and_Technology_logo.svg.png?",
-						"action": {
-						  "type": "message",
-						  "label": "第一張圖",
-						  "text": "1"
-						}
-					  },
-					  {
-						"imageUrl": "https://i.imgur.com/bdXpTZV.jpg?",
-						"action": {
-						  "type": "message",
-						  "label": "第二張圖",
-						  "text": "2"
-						}
-					  },
-					  {
-						"imageUrl": "https://i.imgur.com/bdXpTZV.jpg?",
-						"action": {
-						  "type": "message",
-						  "label": "第二張圖",
-						  "text": "2"
-						}
-					  },
-					  {
-						"imageUrl": "https://i.imgur.com/bdXpTZV.jpg?",
-						"action": {
-						  "type": "message",
-						  "label": "第二張圖",
-						  "text": "2"
-						}
-					  },
-					  {
-						"imageUrl": "https://i.imgur.com/bdXpTZV.jpg?",
-						"action": {
-						  "type": "message",
-						  "label": "第二張圖",
-						  "text": "2"
-						}
-					  },
-					  {
-						"imageUrl": "https://i.imgur.com/bdXpTZV.jpg?",
-						"action": {
-						  "type": "message",
-						  "label": "第二張圖",
-						  "text": "2"
-						}
-					  },
-					  {
-						"imageUrl": "https://i.imgur.com/bdXpTZV.jpg?",
-						"action": {
-						  "type": "message",
-						  "label": "第二張圖",
-						  "text": "2"
-						}
-					  },
-					  {
-						"imageUrl": "https://i.imgur.com/bdXpTZV.jpg?",
-						"action": {
-						  "type": "message",
-						  "label": "第二張圖",
-						  "text": "2"
-						}
-					  }
-					]
+				  ]
 				  }
 				}
+				var template_columns = {
+						"thumbnailImageUrl": "https://twtrafficinfo.herokuapp.com/img/%E5%A4%AA%E9%AD%AF%E9%96%A3.png",
+						"imageBackgroundColor": "#FFFFFF",
+						"title": "更粗的標題",
+						"text": "第一組標題",
+						"defaultAction": {
+							"type": "uri",
+							"label": "點到圖片或標題",
+							"uri": "https://twtrafficinfo.herokuapp.com/img/%E5%8D%80%E9%96%93.png?"
+						},
+						"actions": [
+						  {
+							"type": "message",
+							"label": "第一個按鈕",
+							"text": "1"
+						  }
+						]
+				}
+				reply.template.columns.push(template_columns);
 				event.reply(reply);
 				break;
 			default:
