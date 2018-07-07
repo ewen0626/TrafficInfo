@@ -30,13 +30,19 @@ bot.on('message', function(event) {
 				var reply;
 				var ubikedata = ubike.getubike(station);
 				if (ubikedata !=undefined){
-					//console.log(ubikedata)
 					reply = 
-					emoji.get('bike')  + "ubike站點"+ station +"資訊如下" + "\n" + 
+					emoji.get('bike')  + "ubike"+ station +"資訊如下" + "\n" + 
 					emoji.get(':mag:') +	"總停車格"+ emoji.get(':arrow_right:') + ubikedata.tot + "\n" +
 					emoji.get(':mag:') +	"剩餘車輛"+ emoji.get(':arrow_right:') + ubikedata.sbi + "\n" +
 					emoji.get(':mag:') +	"空停車格"+ emoji.get(':arrow_right:') + ubikedata.bemp + "\n" +
-					emoji.get(':mag:') +	"更新時間"+ emoji.get(':arrow_right:') + ubikedata.mday 						
+					emoji.get(':mag:') +	"更新時間"+ emoji.get(':arrow_right:') + ubikedata.mday
+					reply = {
+					  "type": "location",
+					  "title": reply,
+					  "address": ubikedata.ar,
+					  "latitude": ubikedata.lat,
+					  "longitude": ubikedata.lng
+					}					
 				}else{
 					reply = emoji.get('crossed_swords') + "站點名稱輸入錯誤"
 				}
@@ -116,39 +122,14 @@ bot.on('message', function(event) {
 					event.reply(reply);
 				break;
 			case '測試地圖':
-				var reply = {
-				  "type": "imagemap",
-				  "baseUrl": "https://upload.wikimedia.org/wikipedia/zh/thumb/8/8c/Chien_Hsin_University_of_Science_and_Technology_logo.svg/1024px-Chien_Hsin_University_of_Science_and_Technology_logo.svg.png?",
-				  "altText": "在不支援顯示影像地圖的地方顯示的文字",
-				  "baseSize": {
-					"height": 1040,
-					"width": 1040
-				  },
-				  "actions": [
-					{
-					  "type": "uri",
-					  "linkUri": "http://twtraffic.tra.gov.tw/twrail/mobile/TrainDetail.aspx?searchdate=2018/07/06&traincode=129",
-					  "label": "測試火車細節",
-					  "area": {
-						"x": 0,
-						"y": 0,
-						"width": 520,
-						"height": 1040
-					  }
-					},
-					{
-					  "type": "message",
-					  "text": "梓宸帥",
-					  "area": {
-						"x": 520,
-						"y": 0,
-						"width": 520,
-						"height": 1040
-					  }
+					reply = {
+					  "type": "location",
+					  "title": "第一行文字\n1234567\n321\n123\n",
+					  "address": "第二行文字/n1234567/n321/n123/n",
+					  "latitude": 35.65910807942215,
+					  "longitude": 139.70372892916203
 					}
-				  ]
-				}
-				event.reply(reply);
+					event.reply(reply);
 				break;
 			case "測試樣板" :
 				reply = {

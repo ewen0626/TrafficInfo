@@ -10,7 +10,7 @@ var train = require('./function/train_search.js');
 
 
 var router = express.Router();// 建立 Router 物件
-
+app.use(express.static('public'));
 routes(app) //抓取路由設定
 
 // ---- 啟動伺服器 ----
