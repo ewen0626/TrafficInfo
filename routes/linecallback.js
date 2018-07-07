@@ -76,7 +76,7 @@ bot.on('message', function(event) {
 				}
 				var reply = '';
 				var traindata =  train(StartStation,EndStation)
-				//console.log("資料 :  " + traindata);
+				console.log("資料 :  " + traindata);
 				if (traindata == "車站名稱輸入錯誤"){
 					//console.log("1");
 					reply = emoji.get('crossed_swords') + "車站輸入錯誤";	
@@ -95,7 +95,7 @@ bot.on('message', function(event) {
 					}else{
 						reply = {
 						  "type": "template",
-						  "altText": "在不支援顯示樣板的地方顯示的文字",
+						  "altText": "火車資訊",
 						  "template": {
 							"type": "carousel",
 							"imageAspectRatio": "rectangle",
@@ -107,19 +107,19 @@ bot.on('message', function(event) {
 							var imgUrl = ""
 							switch (TrainStation.TrainClass(traindata[i].CarClass)){
 								case "區間車":
-									imgUrl = "https://twtrafficinfo.herokuapp.com/img/區間.png"
+									imgUrl = "https://twtrafficinfo.herokuapp.com/img/區間.png?"
 									break;
 								case "自強(普悠瑪)":
-									imgUrl = "https://twtrafficinfo.herokuapp.com/img/普悠瑪.png"
+									imgUrl = "https://twtrafficinfo.herokuapp.com/img/普悠瑪.png?"
 									break;
 								case "莒光":
-									imgUrl = "https://twtrafficinfo.herokuapp.com/img/莒光.png"
+									imgUrl = "https://twtrafficinfo.herokuapp.com/img/莒光.png?"
 									break;
 								case "自強(太魯閣)":
-									imgUrl = "https://twtrafficinfo.herokuapp.com/img/太魯閣.png"
+									imgUrl = "https://twtrafficinfo.herokuapp.com/img/太魯閣.png?"
 									break;
 								case "自強":
-									imgUrl = "https://twtrafficinfo.herokuapp.com/img/自強.png"
+									imgUrl = "https://twtrafficinfo.herokuapp.com/img/自強.png?"
 									break;
 								default:
 							}
@@ -142,6 +142,7 @@ bot.on('message', function(event) {
 									]
 							}	
 							reply.template.columns.push(template_columns);
+							
 						}						
 					}
 				}
@@ -234,6 +235,31 @@ bot.on('message', function(event) {
 	}
 	
 });
+bot.on('follow',   function (event) {
+	reply = {
+	  "type": "imagemap",
+	  "baseUrl": "https://i2.wp.com/www.blacklive.com.tw/wp-content/uploads/2018/01/%E6%AD%A1%E8%BF%8E.png?fit=760%2C510&ssl=1?",
+	  "altText": "歡迎使用",
+	  "baseSize": {
+		"height": 1040,
+		"width": 1040
+	  },
+	  "actions": [
+		{
+		  "type": "message",
+		  "text": "help",
+		  "area": {
+			"x": 0,
+			"y": 0,
+			"width": 1040,
+			"height": 1040
+		  }
+		}
+	  ]
+	}
+	event.reply(reply);
+});
+
 const linebotParser = bot.parser();
 router.post('/', linebotParser);
 module.exports = router
