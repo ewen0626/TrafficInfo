@@ -5,7 +5,7 @@ var tybus = require('./tybus.json');
 var xml2js = require('xml2js');
 var parser = new xml2js.Parser();
 
-var name = "1"
+var name = "5617"
 
 function BusStation(name){ //以路線之名稱取得路線之ID
 	var data = tybus.BusDynInfo.BusInfo.Route
@@ -15,13 +15,13 @@ function BusStation(name){ //以路線之名稱取得路線之ID
 		return item['-nameZh']
 	}).indexOf(name);
 	console.log(BusStation);
-	if (BusStation !=0){
+	if (BusStation == -1){
 		return undefined
 	}
 	return  tybus.BusDynInfo.BusInfo.Route[BusStation]["-ID"] //回傳該路線的路線ID
 	
 }
-//console.log(BusStation(name))
+console.log(BusStation(name))
 
 exports.getBusData = function(name){
 	//console.log("執行到這");
