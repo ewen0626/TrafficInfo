@@ -135,6 +135,11 @@ bot.on('message', function(event) {
 									},
 									"actions": [
 									  {
+										"type": "uri",
+										"label": "前往台鐵網站",
+										"uri": "http://twtraffic.tra.gov.tw/twrail/mobile/home.aspx"
+									  },									
+									  {
 										"type": "message",
 										"label": "回主頁面",
 										"text": "梓宸帥"
@@ -146,6 +151,11 @@ bot.on('message', function(event) {
 						}						
 					}
 				}
+				event.reply(reply);
+				break;
+			case '梓宸帥':
+				//var trainNumber = command[1];
+				var reply = "沒錯"
 				event.reply(reply);
 				break;
 			case '公車':
@@ -184,14 +194,28 @@ bot.on('message', function(event) {
 					event.reply(reply);
 				break;
 			case '測試地圖':
-					reply = {
-					  "type": "location",
-					  "title": "第一行文字\n1234567\n321\n123\n",
-					  "address": "第二行文字/n1234567/n321/n123/n",
-					  "latitude": 35.65910807942215,
-					  "longitude": 139.70372892916203
+				reply = {
+				  "type": "imagemap",
+				  "baseUrl": "https://i2.wp.com/www.blacklive.com.tw/wp-content/uploads/2018/01/%E6%AD%A1%E8%BF%8E.png?fit=760%2C510&ssl=1?",
+				  "altText": "歡迎使用",
+				  "baseSize": {
+					"height": 1040,
+					"width": 1040
+				  },
+				  "actions": [
+					{
+					  "type": "message",
+					  "text": "help",
+					  "area": {
+						"x": 0,
+						"y": 0,
+						"width": 1040,
+						"height": 1040
+					  }
 					}
-					event.reply(reply);
+				  ]
+				}
+				event.reply(reply);
 				break;
 			case "測試樣板" :
 				reply = {
