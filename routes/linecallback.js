@@ -216,7 +216,7 @@ bot.on('message', function(event) {
 					emoji.get(':one:') + "ubike指令 " + emoji.get(':arrow_heading_down:') + "\nubike [站點名稱] \n" +
 					emoji.get(':two:') +"火車指令 " + emoji.get(':arrow_heading_down:') + "\n火車 [起站] [迄站] [數量] \n" +
 					emoji.get(':three:') +"公車指令 "+ emoji.get(':arrow_heading_down:') + "\n地區+公車 [路線名稱]\n" + 
-					"目前ubike支援桃園、新北市 公車支援 台北、桃園"
+					"目前ubike支援桃園、雙北 公車支援 台北、桃園"
 					event.reply(reply);
 				break;
 			case '測試地圖':

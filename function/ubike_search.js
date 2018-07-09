@@ -57,21 +57,21 @@ exports.getubikedata = function(){	//開機時先擷取一次
 		});
 		// response event 'end' 當接收 data 結束的時候。
 		response.on('end', function(){
-			var DataArray = [];
 			data = JSON.parse(data);
-			DataArray.push(data.retVal)
-			
+			var DataArray = Object.keys(data.retVal);
 			DataArray.forEach(function(val){
-				var index = val['0001'].sna //KEY  = 各站名
-				ubikedata[index] = val
-				//console.log(val)
+				var index = data.retVal[val].sna
+				ubikedata[index] = data.retVal[val];
 			})
 			console.log('台北ubike資料擷取完成');
-			console.log(ubikedata)
+			//console.log(ubikedata)
 		});
 	}).on('error', function(e){ // http get 錯誤時
 		  console.log("error: ", e);
 	});
+	setTimeout(function(){
+	//console.log(ubikedata)
+},5000)
 	
 }
 exports.getubike = function(station){ //回傳ubike站點資料
