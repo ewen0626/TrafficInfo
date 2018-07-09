@@ -202,7 +202,7 @@ bot.on('message', function(event) {
 					data.go.forEach(function(val){
 						reply += "  " +  val.name + " " + val.status +"\n"
 					});
-					reply  = emoji.get(':heavy_minus_sign:')+emoji.get(':heavy_minus_sign:')+emoji.get(':heavy_minus_sign:')+"回程"+emoji.get(':heavy_minus_sign:')+ emoji.get(':heavy_minus_sign:')+emoji.get(':heavy_minus_sign:')+"\n"
+					reply  += emoji.get(':heavy_minus_sign:')+emoji.get(':heavy_minus_sign:')+emoji.get(':heavy_minus_sign:')+"回程"+emoji.get(':heavy_minus_sign:')+ emoji.get(':heavy_minus_sign:')+emoji.get(':heavy_minus_sign:')+"\n"
 					data.back.forEach(function(val){
 						reply += "  " +  val.name + " " + val.status + "\n"
 					})
