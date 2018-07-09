@@ -1,5 +1,7 @@
 ﻿const express = require('express');
 
+
+var TaipeiBus = require('../function/TaipeiBus.js');
 var ubike = require('../function/ubike_search.js');
 var train = require('../function/train_search.js');
 var TrainStation  = require('../function/TrainStation.js');
@@ -158,7 +160,7 @@ bot.on('message', function(event) {
 				var reply = "沒錯"
 				event.reply(reply);
 				break;
-			case '公車':
+			case '桃園公車':
 				var reply = "";
 				var RouteName = command[1];
 				var busdata = tycbus.getBusData(RouteName);
@@ -186,11 +188,35 @@ bot.on('message', function(event) {
 				}
 				event.reply(reply);
 				break;
+			case '台北公車':
+				var reply = '';
+				var Route = encodeURI(command[1]);
+				var data_go = '';
+				var data_back = '';
+				TaipeiBus(Route, function(error, data) {
+					if (error != null) { /* if error */
+						console.log(error);
+						return;
+					}
+					reply  = emoji.get(':heavy_minus_sign:')+emoji.get(':heavy_minus_sign:')+emoji.get(':heavy_minus_sign:')+"去程"+emoji.get(':heavy_minus_sign:')+ emoji.get(':heavy_minus_sign:')+emoji.get(':heavy_minus_sign:')+"\n"
+					data.go.forEach(function(val){
+						reply += "  " +  val.name + " " + val.status +"\n"
+					});
+					reply  = emoji.get(':heavy_minus_sign:')+emoji.get(':heavy_minus_sign:')+emoji.get(':heavy_minus_sign:')+"回程"+emoji.get(':heavy_minus_sign:')+ emoji.get(':heavy_minus_sign:')+emoji.get(':heavy_minus_sign:')+"\n"
+					data.back.forEach(function(val){
+						reply += "  " +  val.name + " " + val.status + "\n"
+					})
+					console.log(data);
+					event.reply(reply);
+				});
+				
+				break;
 			case 'help':
 				var reply = emoji.get(':new:') + emoji.get(':new:') + emoji.get(':new:') + emoji.get(':new:') + emoji.get(':new:') + "\n" +
 					emoji.get(':one:') + "ubike指令 " + emoji.get(':arrow_heading_down:') + "\nubike [站點名稱] \n" +
 					emoji.get(':two:') +"火車指令 " + emoji.get(':arrow_heading_down:') + "\n火車 [起站] [迄站] [數量] \n" +
-					emoji.get(':three:') +"公車指令 "+ emoji.get(':arrow_heading_down:') + "\n公車 [路線名稱]"
+					emoji.get(':three:') +"公車指令 "+ emoji.get(':arrow_heading_down:') + "\n地區+公車 [路線名稱]\n" + 
+					"目前ubike支援桃園、新北市 公車支援 台北、桃園"
 					event.reply(reply);
 				break;
 			case '測試地圖':
@@ -252,7 +278,7 @@ bot.on('message', function(event) {
 				break;
 			default:
 				var reply =  emoji.get('u7981') + "無此指令或無資料\n"+
-						emoji.get(':star:') + "請輸入 help 已取得指令資訊"
+						emoji.get(':star:') + "請輸入 help 以取得指令資訊"
 				event.reply(reply);
 				
 		}

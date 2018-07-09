@@ -7,7 +7,8 @@ const routes = require('./routes');
 var ubike = require('./function/ubike_search.js');
 var tycbus = require('./function/tycbus_search.js');
 var train = require('./function/train_search.js');
-
+var TaipeiBus = require('./function/TaipeiBus.js');
+//var TPBus = require('./function/TPBus.js')
 
 var router = express.Router();// 建立 Router 物件
 app.use(express.static('public'));
@@ -21,7 +22,6 @@ app.listen(process.env.PORT || 8080,function(){
 	var a = "中壢"
 	var b = "板橋"
 	//console.log(train(a,b).length)
-	
 });
 
 setInterval(function(){
@@ -48,12 +48,3 @@ setInterval(function(){
 });	
 	console.log('GET成功');		
 },1080000);
-
-/*StartStationIndex = number10
-EndStationIndex = number18
-StartStation_data = [object Object]
-EndStation_data = [object Object]
-StartStationIndex = number20
-EndStationIndex = number12
-StartStationIndex = number6
-EndStationIndex = number4*/

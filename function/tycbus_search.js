@@ -14,14 +14,14 @@ function BusStation(name){ //以路線之名稱取得路線之ID
 		//console.log(item['-nameZh'])
 		return item['-nameZh']
 	}).indexOf(name);
-	console.log(BusStation);
+	//console.log(BusStation);
 	if (BusStation == -1){
 		return undefined
 	}
 	return  tybus.BusDynInfo.BusInfo.Route[BusStation]["-ID"] //回傳該路線的路線ID
 	
 }
-console.log(BusStation(name))
+//console.log(BusStation(name))
 
 exports.getBusData = function(name){
 	//console.log("執行到這");
