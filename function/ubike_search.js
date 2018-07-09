@@ -2,6 +2,7 @@ var http = require("http");
 var fs = require("fs"); 
 var TycUbikeurl = 'http://data.tycg.gov.tw/api/v1/rest/datastore/a1b4714b-3b75-4ff8-a8f2-cc377e4eaa0f?format=json&limit=2000';
 var NewTaipeiUbikeurl = "http://data.ntpc.gov.tw/api/v1/rest/datastore/382000000A-000352-001";
+var TaipeiUbikeurl = "http://tcgbusfs.blob.core.windows.net/blobyoubike/YouBikeTP.json";
 var ubikedata = {};
 exports.getubikedata = function(){	//開機時先擷取一次
 	ubikedata = {};
@@ -43,6 +44,30 @@ exports.getubikedata = function(){	//開機時先擷取一次
 			})		
 			console.log('新北ubike資料擷取完成');
 			//console.log(ubikedata)
+		});
+	}).on('error', function(e){ // http get 錯誤時
+		  console.log("error: ", e);
+	});
+	
+	http.get(TaipeiUbikeurl, function(response){
+		var data = '';
+		// response event 'data' 當 data 陸續接收的時候，用一個變數累加它。
+		response.on('data', function(chunk){
+			data += chunk;
+		});
+		// response event 'end' 當接收 data 結束的時候。
+		response.on('end', function(){
+			var DataArray = [];
+			data = JSON.parse(data);
+			DataArray.push(data.retVal)
+			
+			DataArray.forEach(function(val){
+				var index = val['0001'].sna //KEY  = 各站名
+				ubikedata[index] = val
+				//console.log(val)
+			})
+			console.log('台北ubike資料擷取完成');
+			console.log(ubikedata)
 		});
 	}).on('error', function(e){ // http get 錯誤時
 		  console.log("error: ", e);
