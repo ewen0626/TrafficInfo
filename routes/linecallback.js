@@ -223,7 +223,7 @@ bot.on('message', function(event) {
 			case '測試地圖':
 				reply = {
 				  "type": "imagemap",
-				  "baseUrl": "https://i2.wp.com/www.blacklive.com.tw/wp-content/uploads/2018/01/%E6%AD%A1%E8%BF%8E.png?fit=760%2C510&ssl=1?",
+				  "baseUrl": "https://twtrafficinfo.herokuapp.com/img/welcome.png?",
 				  "altText": "歡迎使用",
 				  "baseSize": {
 					"height": 1040,
@@ -289,7 +289,7 @@ bot.on('message', function(event) {
 bot.on('follow',   function (event) {
 	reply = {
 	  "type": "imagemap",
-	  "baseUrl": "https://i2.wp.com/www.blacklive.com.tw/wp-content/uploads/2018/01/%E6%AD%A1%E8%BF%8E.png?fit=760%2C510&ssl=1?",
+	  "baseUrl": "https://twtrafficinfo.herokuapp.com/img/welcome.png?",
 	  "altText": "歡迎使用",
 	  "baseSize": {
 		"height": 1040,
