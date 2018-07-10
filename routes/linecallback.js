@@ -29,10 +29,11 @@ bot.on('message', function(event) {
 	var timeMonth=time.getMonth()+1; 
 	var timeDate=time.getDate();
 	var timeYear = time.getYear();	
-	if (timeMonth.length = 1){
+	
+	if (timeMonth < 10){
 		timeMonth = "0" + timeMonth;
 	}
-	if (timeDate.length = 1){
+	if (timeDate.length < 10){
 		timeDate = "0" + timeDate;
 	}
 	var today = timeYear+1900 + "/" + timeMonth + "/" + timeDate
@@ -133,7 +134,7 @@ bot.on('message', function(event) {
 									"defaultAction": {
 										"type": "uri",
 										"label": "點到圖片或標題",
-										"uri": "http://twtraffic.tra.gov.tw/twrail/mobile/TrainDetail.aspx?searchdate="+today+"&traincode="+traindata[i].Train 
+										"uri": "http://twtraffic.tra.gov.tw/twrail/mobile/TrainDetail.aspx?searchdate="+today+"&traincode="+traindata[i].Train
 									},
 									"actions": [
 									  {
@@ -149,7 +150,7 @@ bot.on('message', function(event) {
 									]
 							}	
 							reply.template.columns.push(template_columns);
-							
+							//console.log("http://twtraffic.tra.gov.tw/twrail/mobile/TrainDetail.aspx?searchdate="+today+"&traincode="+traindata[i].Train);
 						}						
 					}
 				}
