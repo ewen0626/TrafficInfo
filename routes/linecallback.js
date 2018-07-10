@@ -213,11 +213,13 @@ bot.on('message', function(event) {
 				
 				break;
 			case 'help':
-				var reply = emoji.get(':new:') + emoji.get(':new:') + emoji.get(':new:') + emoji.get(':new:') + emoji.get(':new:') + "\n" +
-					emoji.get(':one:') + "ubike指令 " + emoji.get(':arrow_heading_down:') + "\nubike [站點名稱] \n" +
-					emoji.get(':two:') +"火車指令 " + emoji.get(':arrow_heading_down:') + "\n火車 [起站] [迄站] [數量] \n" +
-					emoji.get(':three:') +"公車指令 "+ emoji.get(':arrow_heading_down:') + "\n地區+公車 [路線名稱]\n" + 
-					"目前ubike支援桃園、雙北 公車支援 台北、桃園"
+				var reply = emoji.get(':cancer:') +"	" +  emoji.get(':gemini:') +"	" +  emoji.get(':leo:') +"	" +  emoji.get(':capricorn:') +"	" +  emoji.get(':cancer:') + "	" + "\n" +
+					emoji.get(':one:') + "ubike指令 " + emoji.get(':arrow_heading_down:') + "\nubike [站點名稱] \n\n" +
+					emoji.get(':two:') +"火車指令 " + emoji.get(':arrow_heading_down:') + "\n火車 [起站] [迄站] [數量] \n\n" +
+					emoji.get(':three:') +"公車指令 "+ emoji.get(':arrow_heading_down:') + "\n地區+公車 [路線名稱]\n\n" + 
+					"支援範圍:\n" + 
+					"公車: 桃園、台北地區公車\n" +
+					"ubike:桃園、台北、新北地區站點皆可查詢"
 					event.reply(reply);
 				break;
 			case '測試地圖':
