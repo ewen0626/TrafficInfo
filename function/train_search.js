@@ -7,7 +7,7 @@
 5.判斷時間戳，排除已過之班次
 */
 
-module.exports= function (StartStation,EndStation){
+module.exports= function (StartStation,EndStation,SearchTime){
 	var TrainStation  = require('./TrainStation.js');
 	var traindata = require('./20180622.json');
 	var reload = require('require-reload')(require),
@@ -104,15 +104,20 @@ module.exports= function (StartStation,EndStation){
 
 		return a.TimeInfos[0].DepTime > b.TimeInfos[0].DepTime ? 1: -1;
 		
-	})
+	});
 	var nowtime = timeYear+1900+"/"+ timeMonth +"/" + timeDate + " " + timeHour + ":" + timeMinutes;
-	//console.log(nowtime)
 	var today = timeYear+1900+"/"+ timeMonth +"/" + timeDate
 	//console.log("NOWTIMETAG = "+(Date.parse(nowtime)).valueOf())
 	arr = arr.filter(function(value,index,array){
 		var Traintimetag = today + " " + value.TimeInfos[0].DepTime;
 		Traintimetag = Date.parse(Traintimetag).valueOf();
-		var nowtimetag = Date.parse(nowtime).valueOf();
+		if(SearchTime !=false){
+			var nowtimetag = Date.parse(today + " " +SearchTime).valueOf();
+			console.log(today + " " +SearchTime)
+		}else{
+			var nowtimetag = Date.parse(nowtime).valueOf();
+		}
+
 		if (Traintimetag > nowtimetag){
 			return value 
 		}
