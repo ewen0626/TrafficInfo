@@ -69,16 +69,19 @@ bot.on('message', function(event) {
 			case '火車':
 				var StartStation = command[1];
 				var EndStation = command[2];
-				//console.log("StartStation="+StartStation)
-			//	console.log("EndStation="+EndStation)
-				var limit = Number(command[3]) ;
+				var limit = Number(command[3]);
+				var time = command[4];
 				if(isNaN(limit)){ //檢查有沒有輸入LIMIT，若無就預設為3筆資料
 					limit = 3;
 				}else{
 					limit = command[3];
 				}
+				if (time == undefined){
+					time = false;
+				}
 				var reply = '';
-				var traindata =  train(StartStation,EndStation)
+				var traindata =  train(StartStation,EndStation,time)
+				console.log("time = " + time)
 				console.log("資料 :  " + traindata);
 				if (traindata == "車站名稱輸入錯誤"){
 					//console.log("1");
