@@ -14,6 +14,7 @@ exports.getubikedata = function(){	//開機時先擷取一次
 		});
 		// response event 'end' 當接收 data 結束的時候。
 		response.on('end', function(){
+			if(data.indexOf('"success":true')!= -1){
 			data = JSON.parse(data);
 			data.result.records.forEach(function(val){ //將各筆資料整理
 				var index = val.sna //KEY  = 各站名
@@ -22,6 +23,7 @@ exports.getubikedata = function(){	//開機時先擷取一次
 			})		
 			console.log('桃園ubike資料擷取完成');
 			//console.log(ubikedata)
+			}
 		});
 	}).on('error', function(e){ // http get 錯誤時
 		  console.log("error: ", e);
@@ -36,6 +38,7 @@ exports.getubikedata = function(){	//開機時先擷取一次
 		});
 		// response event 'end' 當接收 data 結束的時候。
 		response.on('end', function(){
+			if(data.indexOf('"success":true')!= -1){
 			data = JSON.parse(data);
 			data.result.records.forEach(function(val){ //將各筆資料整理
 				var index = val.sna //KEY  = 各站名
@@ -44,6 +47,7 @@ exports.getubikedata = function(){	//開機時先擷取一次
 			})		
 			console.log('新北ubike資料擷取完成');
 			//console.log(ubikedata)
+			}
 		});
 	}).on('error', function(e){ // http get 錯誤時
 		  console.log("error: ", e);
@@ -57,6 +61,7 @@ exports.getubikedata = function(){	//開機時先擷取一次
 		});
 		// response event 'end' 當接收 data 結束的時候。
 		response.on('end', function(){
+			if(data.indexOf('"retCode":1')!= -1){
 			data = JSON.parse(data);
 			var DataArray = Object.keys(data.retVal);
 			DataArray.forEach(function(val){
@@ -65,6 +70,7 @@ exports.getubikedata = function(){	//開機時先擷取一次
 			})
 			console.log('台北ubike資料擷取完成');
 			//console.log(ubikedata)
+			}
 		});
 	}).on('error', function(e){ // http get 錯誤時
 		  console.log("error: ", e);
