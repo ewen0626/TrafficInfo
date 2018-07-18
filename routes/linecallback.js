@@ -38,7 +38,7 @@ bot.on('message', function(event) {
 	}
 	var today = timeYear+1900 + "/" + timeMonth + "/" + timeDate
 	console.log(today)
-	if (event.message.type = 'text'&& event.message.text!= undefined) {
+	if (event.message.type == 'text'&& event.message.text!= undefined) {
 		var msg = event.message.text;
 		//msg_index = msg.indexOf(" ") //抓取指令類型
 		console.log(event.message.text);
@@ -290,10 +290,12 @@ bot.on('message', function(event) {
 				
 		}
 	}
+	//console.log("12 "+event.message.type)
 	if (event.message.type == 'location'){
 		var lat = event.message.latitude;
 		var lng = event.message.longitude;
-		var reply  = getUbikeDistance(lat,lng);
+		var reply  = ubike.getUbikeDistance(lat,lng);
+		console.log(reply)
 		event.reply(reply);
 	}
 	
