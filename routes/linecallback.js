@@ -290,8 +290,10 @@ bot.on('message', function(event) {
 				
 		}
 	}
-	if (event.message.type = 'location'){
-		var reply  = "位置測試中"
+	if (event.message.type == 'location'){
+		var lat = event.message.latitude;
+		var lng = event.message.longitude;
+		var reply  = getUbikeDistance(lat,lng);
 		event.reply(reply);
 	}
 	

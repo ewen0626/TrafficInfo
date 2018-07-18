@@ -77,7 +77,7 @@ exports.getubikedata = function(){	//開機時先擷取一次
 	});
 	setTimeout(function(){
 		//console.log(ubikedata)
-		getUbikeDistance()
+		//getUbikeDistance()
 	},5000)
 	
 }
@@ -101,15 +101,18 @@ exports.getubike = function(station){ //回傳ubike站點資料
 	return ubikedata[station]
 }
 
-function getUbikeDistance(){
-	var lat1 = 24.950692;
-	var lon1 = 121.216686;
+exports.getUbikeDistance = function (lat,lng){
+	//var lat1 = 24.950692;
+	//var lon1 = 121.216686;
+	var reply = '';
 	var UbikeDataArray = Object.keys(ubikedata);
 	UbikeDataArray.forEach(function(val){
 		var index = ubikedata[val].sna
-		var distance = GetDistance(lat1,lon1,ubikedata[index].lat,ubikedata[index].lng)
+		var distance = GetDistance(lat,lon,ubikedata[index].lat,ubikedata[index].lng)
 		if (distance <=500){
-			console.log(val)
+			//console.log(val)
+			reply += val + "\n"
 		}
-	})	
+	});
+	return reply;
 }
