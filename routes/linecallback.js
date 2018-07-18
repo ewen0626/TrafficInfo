@@ -41,6 +41,7 @@ bot.on('message', function(event) {
 	if (event.message.type = 'text'&& event.message.text!= undefined) {
 		var msg = event.message.text;
 		//msg_index = msg.indexOf(" ") //抓取指令類型
+		console.log(event.message.text);
 		command = msg.split(" ")
 		switch(command[0]){
 			case 'ubike':
@@ -161,7 +162,7 @@ bot.on('message', function(event) {
 				break;
 			case '梓宸帥':
 				//var trainNumber = command[1];
-				var reply = "沒錯"
+				var reply = "錯 立偉最帥"
 				event.reply(reply);
 				break;
 			case '桃園公車':
@@ -228,7 +229,7 @@ bot.on('message', function(event) {
 			case '測試地圖':
 				reply = {
 				  "type": "imagemap",
-				  "baseUrl": "https://twtrafficinfo.herokuapp.com/img/welcome.png?",
+				  "baseUrl": "https://gd3.alicdn.com/imgextra/i3/2651530664/TB2W.vTXlnBIuJjSszgXXa7nFXa_!!2651530664.jpg?",
 				  "altText": "歡迎使用",
 				  "baseSize": {
 					"height": 1040,
@@ -262,14 +263,14 @@ bot.on('message', function(event) {
 				  }
 				}
 				var template_columns = {
-						"thumbnailImageUrl": "https://twtrafficinfo.herokuapp.com/img/%E5%A4%AA%E9%AD%AF%E9%96%A3.png",
+						"thumbnailImageUrl": "https://gd3.alicdn.com/imgextra/i3/2651530664/TB2W.vTXlnBIuJjSszgXXa7nFXa_!!2651530664.jpg?",
 						"imageBackgroundColor": "#FFFFFF",
 						"title": "更粗的標題",
 						"text": "第一組標題",
 						"defaultAction": {
 							"type": "uri",
 							"label": "點到圖片或標題",
-							"uri": "https://twtrafficinfo.herokuapp.com/img/%E5%8D%80%E9%96%93.png?"
+							"uri": "http://a4.att.hudong.com/74/78/01300000772135126274786681453.jpg?"
 						},
 						"actions": [
 						  {
@@ -288,6 +289,10 @@ bot.on('message', function(event) {
 				event.reply(reply);
 				
 		}
+	}
+	if (event.message.type = 'location'){
+		var reply  = "位置測試中"
+		event.reply(reply);
 	}
 	
 });
