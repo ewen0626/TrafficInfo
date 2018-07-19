@@ -294,8 +294,48 @@ bot.on('message', function(event) {
 	if (event.message.type == 'location'){
 		var lat = event.message.latitude;
 		var lng = event.message.longitude;
-		var reply  = ubike.getUbikeDistance(lat,lng);
-		console.log(reply)
+		var ubikedata  = ubike.getUbikeDistance(lat,lng);
+		console.log("ubikedata = "+ubikedata);
+		if(ubikedata != '')
+		{
+			reply = {
+				"type": "template",
+				"altText": "附近ubike",
+				"template": {
+					"type": "carousel",
+					"imageAspectRatio": "rectangle",
+					"imageSize": "contain",
+					"columns": []
+				}
+			}
+			ubikedata.forEach(function(val){
+				var template_columns = {
+					"thumbnailImageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYIpyCBEszrgfmSm9u4UfHiQ9EpuCqbKaMvAealUBk6r67JH5_Zg",
+					"imageBackgroundColor": "#FFFFFF",
+					"title": "站點名稱:" + val,
+					"text":  "點擊可取得更詳細資訊",
+					"defaultAction": {
+						"type": "message",
+						"label": "點到圖片或標題",
+						"text": "ubike " + val.split("[")[0]
+					},
+					"actions": [									
+					{
+						"type": "message",
+						"label": "取得詳細資訊",
+						"text": "ubike " + val.split("[")[0]
+					}
+					]
+				}	
+				reply.template.columns.push(template_columns);			
+			})
+
+			
+			//console.log(reply)
+
+		}else{
+			reply = "附近無站點"
+		}
 		event.reply(reply);
 	}
 	

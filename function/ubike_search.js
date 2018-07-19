@@ -104,15 +104,17 @@ exports.getubike = function(station){ //回傳ubike站點資料
 exports.getUbikeDistance = function (lat,lng){
 	//var lat1 = 24.950692;
 	//var lon1 = 121.216686;
-	var reply = '附近ubike站點如下:\n';
+	var reply = [];
 	var UbikeDataArray = Object.keys(ubikedata);
 	UbikeDataArray.forEach(function(val){
 		var index = ubikedata[val].sna
 		var distance = GetDistance(lat,lng,ubikedata[index].lat,ubikedata[index].lng)
 		if (distance <=500){
 			//console.log(val)
-			reply += val + "\n"
+			reply.push(val+"["+distance+"m]")
 		}
 	});
+	//console.log("reply = " +reply)
+	//console.log(reply.length)
 	return reply;
 }
