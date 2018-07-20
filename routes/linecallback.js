@@ -310,7 +310,7 @@ bot.on('message', function(event) {
 			}
 			ubikedata.forEach(function(val){
 				var template_columns = {
-					"thumbnailImageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYIpyCBEszrgfmSm9u4UfHiQ9EpuCqbKaMvAealUBk6r67JH5_Zg",
+					"thumbnailImageUrl": "https://twtrafficinfo.herokuapp.com/img/UBIKE.png?",
 					"imageBackgroundColor": "#FFFFFF",
 					"title": "站點名稱:" + val,
 					"text":  "點擊可取得更詳細資訊",
