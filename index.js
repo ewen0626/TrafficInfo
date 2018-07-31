@@ -4,10 +4,10 @@ var app     = express();
 const routes = require('./routes');
 
 
-var ubike = require('./function/ubike_search.js');
+/*var ubike = require('./function/ubike_search.js');
 var tycbus = require('./function/tycbus_search.js');
 var train = require('./function/train_search.js');
-var TaipeiBus = require('./function/TaipeiBus.js');
+var TaipeiBus = require('./function/TaipeiBus.js');*/
 //var TPBus = require('./function/TPBus.js')
 
 var router = express.Router();// 建立 Router 物件
@@ -17,16 +17,14 @@ routes(app) //抓取路由設定
 // ---- 啟動伺服器 ----
 app.listen(process.env.PORT || 8080,function(){
 	console.log("伺服器已啟動 Port : " + 8080);
-	ubike.getubikedata() //擷取ubikeData
-	//console.log(tycbus.getBusData('1'));
-	var a = "中壢"
-	var b = "板橋"
-	//console.log(train(a,b).length)
+	
 });
 
-setInterval(function(){
+/*setInterval(function(){
 	ubike.getubikedata() //擷取ubikeData
-},60000)
+},60000)*/
+
+
 
 setInterval(function(){
 	
