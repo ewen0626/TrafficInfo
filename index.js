@@ -4,10 +4,10 @@ var app     = express();
 const routes = require('./routes');
 
 
-/*var ubike = require('./function/ubike_search.js');
+var ubike = require('./function/ubike_search.js');
 var tycbus = require('./function/tycbus_search.js');
 var train = require('./function/train_search.js');
-var TaipeiBus = require('./function/TaipeiBus.js');*/
+var TaipeiBus = require('./function/TaipeiBus.js');
 //var TPBus = require('./function/TPBus.js')
 
 var router = express.Router();// 建立 Router 物件
