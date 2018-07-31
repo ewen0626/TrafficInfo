@@ -20,9 +20,9 @@ app.listen(process.env.PORT || 8080,function(){
 	
 });
 
-/*setInterval(function(){
+setInterval(function(){
 	ubike.getubikedata() //擷取ubikeData
-},60000)*/
+},60000)
 
 
 
