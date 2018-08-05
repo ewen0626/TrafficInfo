@@ -6,6 +6,7 @@ var ubike = require('../function/ubike_search.js');
 var train = require('../function/train_search.js');
 var TrainStation  = require('../function/TrainStation.js');
 var tycbus = require('../function/tycbus_search.js');
+var highway = require('../function/highway_search.js');
 const router = express.Router()
 var linebot = require('linebot');
 const config = require('../config.json'),
@@ -163,6 +164,23 @@ bot.on('message', function(event) {
 			case '梓宸帥':
 				//var trainNumber = command[1];
 				var reply = "錯 立偉最帥"
+				event.reply(reply);
+				break;
+			case '高鐵':
+				var StartStation = command[1];
+				var EndStation = command[2];
+				var InputTime = command[3];
+				var highwaydata = highway.getHighwayData(StartStation,EndStation,InputTime);
+				console.log("highwaydata = " + highwaydata);
+				if(highwaydata != false){
+					var reply = "";
+					highwaydata.forEach(function(val){
+						reply += emoji.get(":bullettrain_side:") + val.Train +  emoji.get(":clock2:") +val.StartTime + emoji.get(":clock2:") + val.EndTime + "\n"
+					})
+				}else{
+					reply = "車站輸入錯誤"
+				}
+					
 				event.reply(reply);
 				break;
 			case '桃園公車':
