@@ -20,6 +20,12 @@ var bot = linebot({
 });
 
 bot.on('message', function(event) {
+	onmessage(event);
+});
+bot.on('follow',   function (event) {
+	onfollow(event);
+});
+function onmessage(event){
 	var today = Time.TimeYear+ "/"+ Time.TimeMonth +"/" + Time.TimeDate
 	var userid = event.source.userId;
 	if (event.message.type == 'text'&& event.message.text!= undefined) {
@@ -247,14 +253,37 @@ bot.on('message', function(event) {
 				});
 				break;
 			case '常用':
+				command_index = command[1] - 1;
 				oftensModel.findOne({userid :userid},function(err, data){
 					if (data == null){
 						reply = "尚未設定常用"
 					}else{
-						data.
+						console.log(data.command)
+						often = data.command[command_index];
+						reply = {
+						  "type": "template",
+						  "altText": "常用",
+						  "template": {
+							"type": "confirm",
+							"text": "指令為 : " + often + " \n是否查詢?",
+							"actions": [
+							  {
+								"type": "message",
+								"label": "是",
+								"text": often
+							  },
+							  {
+								"type": "message",
+								"label": "否",
+								"text": "help"
+							  }
+							]
+						  }
+						}
+						event.reply(reply);
 					}
 				});
-				event.reply(reply);
+				
 				break;
 			case 'help':
 				var reply = emoji.get(':cancer:') +"	" +  emoji.get(':gemini:') +"	" +  emoji.get(':leo:') +"	" +  emoji.get(':capricorn:') +"	" +  emoji.get(':cancer:') + "	" + "\n" +
@@ -380,8 +409,9 @@ bot.on('message', function(event) {
 		event.reply(reply);
 	}
 	
-});
-bot.on('follow',   function (event) {
+}
+
+function onfollow(event){
 	reply = {
 	  "type": "imagemap",
 	  "baseUrl": "https://twtrafficinfo.herokuapp.com/img/welcome.png?",
@@ -403,9 +433,8 @@ bot.on('follow',   function (event) {
 		}
 	  ]
 	}
-	event.reply(reply);
-});
-
+	event.reply(reply);	
+}
 const linebotParser = bot.parser();
 router.post('/', linebotParser);
 module.exports = router
