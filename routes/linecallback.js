@@ -230,8 +230,10 @@ function onmessage(event){
 				
 				break;
 			case '設定常用':
-				var save_command = msg.split('/')[1]
-				var command_index = command[1] +1;
+				var save_command = [];
+				var command_index = Number(command[1]) - 1;
+				//console.log(command_index)
+				save_command[command_index] = msg.split('/')[1]
 				var oftens = new oftensModel({
 					userid : userid,
 					command: save_command ,
@@ -240,10 +242,14 @@ function onmessage(event){
 				oftensModel.findOne({userid :userid},function(err, data){ //先找有沒有設定過
 					if (data==null){ //如果沒有就新增一筆資料
 						oftens.save();// 存LOG資訊	
+						reply = "設定完成"
+						event.reply(reply);
 					}else{
-						data.command[command_index] = save_command;
-						console.log(command_index);
+						data.command[command_index] = save_command[command_index];
+						//console.log(command_index);
 						oftensModel.update({userid :userid},{$set:{command:data.command}},function(err, data){ //如果有就更新
+							console.log("err = "+err)
+							console.log("data = "+data)
 							if (!err){ 
 								reply = "設定完成"
 								event.reply(reply);
