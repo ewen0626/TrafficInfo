@@ -12,6 +12,7 @@ module.exports= function (StartStation,EndStation,SearchTime){
 	var traindata = require('./20180622.json');
 	var reload = require('require-reload')(require),
     traindata = reload('./20180622.json');
+	var Time = require('./Time.js');
 	arr = null;
 	try {
 		//console.log("RELOADED")
@@ -22,14 +23,6 @@ module.exports= function (StartStation,EndStation,SearchTime){
 	}
 	var arr =  traindata.TrainInfos;
 	console.log("ARR = " + arr);
-	d = new Date();
-	utc = d.getTime() + (d.getTimezoneOffset() * 60000);
-	var time=new Date(utc + (3600000*8));
-	var timeHour=time.getHours(); 
-	var timeMinutes=time.getMinutes(); 
-	var timeMonth=time.getMonth()+1; 
-	var timeDate=time.getDate();
-	var timeYear = time.getYear();	
 	StartStation = TrainStation.StationCode(StartStation);
 	EndStation = TrainStation.StationCode(EndStation);
 	if (StartStation === undefined || EndStation === undefined){ //判斷車站是否輸入正確
@@ -105,8 +98,8 @@ module.exports= function (StartStation,EndStation,SearchTime){
 		return a.TimeInfos[0].DepTime > b.TimeInfos[0].DepTime ? 1: -1;
 		
 	});
-	var nowtime = timeYear+1900+"/"+ timeMonth +"/" + timeDate + " " + timeHour + ":" + timeMinutes;
-	var today = timeYear+1900+"/"+ timeMonth +"/" + timeDate
+	var nowtime = Time.TimeYear+ "/"+ Time.TimeMonth +"/" + Time.TimeDate + " " + Time.TimeHour + ":" + Time.TimeMinutes;
+	var today = Time.TimeYear+ "/"+ Time.TimeMonth +"/" + Time.TimeDate
 	//console.log("NOWTIMETAG = "+(Date.parse(nowtime)).valueOf())
 	arr = arr.filter(function(value,index,array){
 		var Traintimetag = today + " " + value.TimeInfos[0].DepTime;

@@ -1,6 +1,4 @@
 ﻿const express = require('express');
-
-
 var TaipeiBus = require('../function/TaipeiBus.js');
 var ubike = require('../function/ubike_search.js');
 var train = require('../function/train_search.js');
@@ -12,32 +10,25 @@ var linebot = require('linebot');
 const config = require('../config.json'),
 	util = require('util');
 var emoji = require('node-emoji');
-
-
+var Time = require('../function/Time.js');
+var logsModel = require('../models/logsModel.js');
+var oftensModel = require('../models/oftensModel.js');
 var bot = linebot({
     channelId: config.channelId,
     channelSecret: config.channelSecret,
     channelAccessToken: config.channelAccessToken
 });
+
 bot.on('message', function(event) {
-	d = new Date();
-	utc = d.getTime() + (d.getTimezoneOffset() * 60000);
-	var time=new Date(utc + (3600000*8));
-	var timeHour=time.getHours(); 
-	var timeMinutes=time.getMinutes(); 
-	var timeMonth=time.getMonth()+1; 
-	var timeDate=time.getDate();
-	var timeYear = time.getYear();	
-	
-	if (timeMonth < 10){
-		timeMonth = "0" + timeMonth;
-	}
-	if (timeDate.length < 10){
-		timeDate = "0" + timeDate;
-	}
-	var today = timeYear+1900 + "/" + timeMonth + "/" + timeDate
-	console.log(today)
+	var today = Time.TimeYear+ "/"+ Time.TimeMonth +"/" + Time.TimeDate
+	var userid = event.source.userId;
 	if (event.message.type == 'text'&& event.message.text!= undefined) {
+		var logs = new logsModel({
+			userid : userid,
+			command:event.message.text,
+			Time :today
+		});
+		logs.save();// 存LOG資訊
 		var msg = event.message.text;
 		//msg_index = msg.indexOf(" ") //抓取指令類型
 		console.log(event.message.text);
@@ -232,11 +223,45 @@ bot.on('message', function(event) {
 				});
 				
 				break;
+			case '設定常用':
+				var save_command = msg.split('/')[1]
+				var command_index = command[1];
+				var oftens = new oftensModel({
+					userid : userid,
+					command: save_command ,
+				});
+
+				oftensModel.findOne({userid :userid},function(err, data){ //先找有沒有設定過
+					if (data==null){ //如果沒有就新增一筆資料
+						oftens.save();// 存LOG資訊	
+					}else{
+						data.command[command_index] = save_command;
+						console.log(command_index);
+						oftensModel.update({userid :userid},{$set:{command:data.command}},function(err, data){ //如果有就更新
+							if (!err){ 
+								reply = "設定完成"
+								event.reply(reply);
+							}
+						});
+					}
+				});
+				break;
+			case '常用':
+				oftensModel.findOne({userid :userid},function(err, data){
+					if (data == null){
+						reply = "尚未設定常用"
+					}else{
+						data.
+					}
+				});
+				event.reply(reply);
+				break;
 			case 'help':
 				var reply = emoji.get(':cancer:') +"	" +  emoji.get(':gemini:') +"	" +  emoji.get(':leo:') +"	" +  emoji.get(':capricorn:') +"	" +  emoji.get(':cancer:') + "	" + "\n" +
 					emoji.get(':one:') + "ubike指令 " + emoji.get(':arrow_heading_down:') + "\nubike [站點名稱] \n\n" +
 					emoji.get(':two:') +"火車指令 " + emoji.get(':arrow_heading_down:') + "\n火車 [起站] [迄站] [數量] \n\n" +
 					emoji.get(':three:') +"公車指令 "+ emoji.get(':arrow_heading_down:') + "\n地區+公車 [路線名稱]\n\n" + 
+					emoji.get(':four:') +"高鐵指令 "+ emoji.get(':arrow_heading_down:') + "\n高鐵 台北 桃園\n\n" + 
 					"支援範圍:\n" + 
 					"公車: 桃園、台北地區公車\n" +
 					"ubike:桃園、台北、新北地區站點皆可查詢"
