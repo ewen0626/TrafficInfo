@@ -257,6 +257,7 @@ function onmessage(event){
 				oftensModel.findOne({userid :userid},function(err, data){
 					if (data == null){
 						reply = "尚未設定常用"
+						event.reply(reply);
 					}else{
 						console.log(data.command)
 						often = data.command[command_index];
