@@ -231,7 +231,7 @@ function onmessage(event){
 				break;
 			case '設定常用':
 				var save_command = msg.split('/')[1]
-				var command_index = command[1];
+				var command_index = command[1] +1;
 				var oftens = new oftensModel({
 					userid : userid,
 					command: save_command ,
@@ -253,7 +253,7 @@ function onmessage(event){
 				});
 				break;
 			case '常用':
-				command_index = command[1] - 1;
+				command_index = command[1];
 				oftensModel.findOne({userid :userid},function(err, data){
 					if (data == null){
 						reply = "尚未設定常用"
