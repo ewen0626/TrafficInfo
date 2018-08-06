@@ -259,7 +259,8 @@ function onmessage(event){
 				});
 				break;
 			case '常用':
-				command_index = command[1];
+				command_index = Number(command[1]) -1 ;
+				console.log(command_index);
 				oftensModel.findOne({userid :userid},function(err, data){
 					if (data == null){
 						reply = "尚未設定常用"
