@@ -1,8 +1,8 @@
 //var http = require("http");
 var fs = require("fs");
 var cheerio = require("cheerio");
-var request = require('sync-request');
-var station = {
+var request = require('sync-request'); //同步模組
+var station = { //高鐵站資料表
 	南港:'2f940836-cedc-41ef-8e28-c2336ac8fe68',
 	台北:'977abb69-413a-4ccf-a109-0272c24fd490',
 	板橋:'e6e26e66-7dc1-458f-b2f3-71ce65fdc95f',
@@ -53,12 +53,14 @@ exports.getHighwayData =function (StartStation,EndStation,InputTime){
 		nowtime = time_hour + ":" + time_minute;
 	}else{
 		nowtime = InputTime;
+		
 	}
-	var res = request('POST', 'https://www.thsrc.com.tw/tw/TimeTable/SearchResult', {
+	
+	var res = request('POST', 'https://www.thsrc.com.tw/tw/TimeTable/SearchResult', { // request模組 
 		headers: {
 			'Content-Type': 'application/x-www-form-urlencoded',
 	},
-		body:"StartStation=" + station[StartStation] +"&"+ 
+		body:"StartStation=" + station[StartStation] +"&"+  //EX. StartStation=123&EndStation=321
 		"EndStation=" + station[EndStation] +"&" +
 		"SearchDate=" + time_year+"/"+ time_month +"/" + time_day + "&" +
 		"SearchTime=" + nowtime + "&" +
@@ -66,12 +68,8 @@ exports.getHighwayData =function (StartStation,EndStation,InputTime){
 	});
 	body  =res.getBody('utf8');
 	var $ = cheerio.load(body);
-//	var Train = $("[class='column1']").text();
-	//var StartTime = $("[class='column3']").text();
-	//var ArrTime = $("[class='column4']").text();
-
 	var data = [];
-	for (var i =1;i<$("[class='column1']").length;i++){
+	for (var i =1;i<$("[class='column1']").length;i++){ //將資料組成JSON
 		Train = $("[class='column1']").eq(i).text();
 		StartTime = $("[class='column3']").eq(i).text();
 		EndTime = $("[class='column4']").eq(i).text();

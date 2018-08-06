@@ -20,11 +20,20 @@ app.listen(process.env.PORT || 8080,function(){
 	
 });
 
-setInterval(function(){
+setInterval(function(){ //定時取得資料
 	ubike.getubikedata() //擷取ubikeData
 },60000)
 
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://ewen0626:yuda39429@ds213612.mlab.com:13612/heroku_cf8p9gsh');
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
 
+db.once('open', function callback () {									
+	/*var users = new usersModel({name:'Zack',phone:'0930082454'});
+	users.save();*/
+	console.log("Database Connected.");
+});
 
 setInterval(function(){
 	

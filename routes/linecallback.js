@@ -11,10 +11,8 @@ const router = express.Router()
 var linebot = require('linebot');
 const config = require('../config.json'),
 	util = require('util');
-	
-/*var reload = require('require-reload')(require),
-    train = reload('../function/train_search.js');*/
 var emoji = require('node-emoji');
+
 
 var bot = linebot({
     channelId: config.channelId,
@@ -175,10 +173,10 @@ bot.on('message', function(event) {
 				if(highwaydata != false){
 					var reply = "";
 					highwaydata.forEach(function(val){
-						reply += emoji.get(":bullettrain_side:") + val.Train +  emoji.get(":clock2:") +val.StartTime + emoji.get(":clock2:") + val.EndTime + "\n"
+						reply += "\n" + emoji.get(":bullettrain_side:") + val.Train +  emoji.get(":clock2:") +val.StartTime + emoji.get(":clock2:") + val.EndTime + "\n"
 					})
 				}else{
-					reply = "車站輸入錯誤"
+					reply = "車站或時間輸入錯誤"
 				}
 					
 				event.reply(reply);
