@@ -11,7 +11,7 @@ module.exports= function (StartStation,EndStation,SearchTime){
 	var TrainStation  = require('./TrainStation.js');
 	var traindata = require('./20181012.json');
 	var reload = require('require-reload')(require),
-    traindata = reload('./20180622.json');
+    traindata = reload('./20181012.json');
 	var Time = require('./Time.js');
 	arr = null;
 	try {
